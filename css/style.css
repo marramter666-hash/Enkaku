@@ -26,6 +26,12 @@ a:hover {
     transform: scale(7);
 }
 
+
+
+
+
+
+/* HEADER */
 .header > div {
     box-sizing: border-box;
     margin: 0;
@@ -50,4 +56,47 @@ a:hover {
     padding: 2vh 3vw;
     background-color: white;
     border-radius: 50px;
+}
+
+
+
+
+/* SECTION HIRO */
+.hiro {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50vh 10vw;
+    background-color: aqua;
+}
+
+/* SECTION PRODUCTOS */
+.productos {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50vh 10vw;
+    background-color: rgb(76, 0, 255);
+}
+
+/* SECTION EXPLICACION */
+.explicacion {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50vh 10vw;
+    background-color: rgb(225, 0, 255);
+}
+
+/* SECTION GENERO DEL MES */
+.genero_del_mes {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50vh 10vw;
+    background-color: rgb(255, 0, 191);
+}
+
+/* FOOTER */
+.footer {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50vh 10vw;
+    background-color: rgb(255, 0, 0);
 }
