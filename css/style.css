@@ -97,6 +97,36 @@ a:hover {
 .footer {
     box-sizing: border-box;
     margin: 0;
-    padding: 50vh 10vw;
+    padding: 5vh 10vw 10vh 10vw;
     background-color: rgb(255, 0, 0);
+}
+
+.footer > div {
+    padding: 0vh 0vw 3vh 0vw;
+}
+
+.footer_texto {
+    display: flex;
+    justify-content: space-around;
+    gap: 5vw;
+}
+
+.footer_img {
+    box-sizing: border-box;
+    margin: 2vh 0vw;
+    padding: 0;
+    display: flex;
+    justify-content: right;
+}
+
+.footer_info {
+    display: flex;
+    justify-content: right;
+    border-top: black solid 2px;
+}
+
+.footer_info > p {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2vh 0vw;
 }
