@@ -45,7 +45,7 @@ p {
 
 
 /* HEADER */
-.header > div {
+.header > nav {
     box-sizing: border-box;
     margin: 0;
     padding: 2vh 49vw;
@@ -64,7 +64,7 @@ p {
 }
 
 
-.header > div > div {
+.header > nav > div {
     box-sizing: border-box;
     margin: 0vh 0vw;
     padding: 1vh 2vw;
@@ -161,7 +161,7 @@ p {
 .footer {
     box-sizing: border-box;
     margin: 0;
-    padding: 13vh 10vw 1vh 10vw;
+    padding: 11vh 10vw 0vh 10vw;
     background-color: rgb(255, 0, 0);
 }
 
