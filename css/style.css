@@ -20,6 +20,7 @@
     --tamaño-20px: 1.25rem;
     --tamaño-24px: 1.5rem;
     --tamaño-32px: 2rem;
+    --tamaño-36px: 2.25rem;
 }
 
 * {
@@ -45,6 +46,16 @@ p {
 }
 
 /* TEXTO */
+.enunciado_español {
+    font-size: var(--tamaño-24px);
+}
+
+.enunciado_japones {
+    font-size: var(--tamaño-20px);
+}
+
+
+
 .disco_nombre {
     font-size: var(--tamaño-12px);
 }
@@ -63,6 +74,11 @@ p {
 
 .disco_etiquetas {
     font-size: var(--tamaño-12px);
+}
+
+
+.parrafo {
+    font-size: var(--tamaño-36px);
 }
 
 
@@ -96,7 +112,8 @@ p {
     margin: 0;
     padding: 2vh 49vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     gap: 3vw;
     background-color: black;
     border-radius: 15px;
@@ -110,12 +127,31 @@ p {
 }
 
 
+.header > nav > img {
+    height: 4vh;
+    width: auto;
+}
+
 .header > nav > div {
+    box-sizing: border-box;
+    margin: 0vh 0vw;
+    padding: 1vh 2vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+}
+
+.header > nav > div > div {
     box-sizing: border-box;
     margin: 0vh 0vw;
     padding: 1vh 2vw;
     background-color: var(--color-blanco);
     border-radius: 10px;
+    display: flex;
+    justify-content: right;
+    gap: 0vw;
 }
 
 
@@ -151,6 +187,31 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.productos_titulo > :first-child {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.productos_titulo > :last-child > a {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1vh 1vw 1vh 1vw;
+    border: var(--color-negro) solid 1.5px;
+    border-radius: 20px;
+}
+
+.productos_titulo > :last-child > a:hover {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1vh 1vw 1vh 1vw;
+    border: var(--color-negro) solid 1.5px;
+    border-radius: 20px;
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
 }
 
 .productos_nuevos {
@@ -245,8 +306,16 @@ p {
 .explicacion {
     box-sizing: border-box;
     margin: 0;
-    padding: 30vh 10vw;
+    padding: 40vh 10vw 0vh 10vw;
     background-color: var(--color-blanco);
+}
+
+.explicacion > div > :first-child {
+    padding: 0vh 0vw 2vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
 }
 
 
@@ -258,7 +327,7 @@ p {
 .genero_del_mes {
     box-sizing: border-box;
     margin: 0;
-    padding: 10vh 10vw 6vh 10vw;
+    padding: 15vh 10vw 6vh 10vw;
     background-color: var(--color-blanco);
 }
 
@@ -269,6 +338,14 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+}
+
+.genero_titulo > div {
+    padding: 0vh 0vw 2vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
 }
 
 .genero_fila {
@@ -301,7 +378,7 @@ p {
 .genero_disco > div {
     box-sizing: border-box;
     margin: 0vh 0vw 0vh 0vw;
-    padding: 5vh 3vw;
+    padding: 3vh 1.5vw;
     height: 100%;
     width: 100%;
     display: flex;
@@ -311,6 +388,13 @@ p {
     position: relative;  
     z-index: 10;
 }
+
+/* .genero_disco_portada {
+    display: flex;
+    justify-content: ;
+} */
+
+genero_disco_texto
 
 
 
