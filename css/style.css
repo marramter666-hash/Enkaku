@@ -1,10 +1,10 @@
 :root {
     /* COLORES */
-    --color-blanco: ;
-    --color-negro: ;
-    --color-azul: ;
-    --color-rosa: ;
-    --color-amarillo: ;
+    --color-blanco: #FFFFFF;
+    --color-negro: #000000;
+    --color-azul: #003C38;
+    --color-rosa: #F892C5;
+    --color-amarillo: #FFC20E;
 
     /* FUENTES */
     --fuente-principal: ;
@@ -25,7 +25,7 @@
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--color-negro);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
 }
@@ -68,7 +68,7 @@ p {
     box-sizing: border-box;
     margin: 0vh 0vw;
     padding: 1vh 2vw;
-    background-color: white;
+    background-color: var(--color-blanco);
     border-radius: 10px;
 }
 
@@ -87,24 +87,104 @@ p {
 .productos {
     box-sizing: border-box;
     margin: 0;
-    padding: 50vh 10vw;
-    background-color: rgb(76, 0, 255);
+    padding: 12vh 10vw 4vh 10vw;
+    background-color: var(--color-blanco);
 }
+
+.productos_titulo {
+    margin: 5vh 0vw;
+    padding: 5vh 1vw 3vh 1vw;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productos_nuevos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.productos_opciones {
+    width: auto;
+    height: 75vh;
+
+}
+
+.productos_opciones_img {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--color-blanco);
+}
+
+.productos_opciones_texto > div {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 3vh 0vw 0vh 0vw;
+}
+
+/* .productos_opciones_texto_nombre */
+
+.productos_opciones_texto_autor {
+    display: flex;
+    justify-content: space-between;
+}
+
+.productos_opciones_texto_etiquetas {
+    display: flex;
+    justify-content: left;
+    gap: 0.5vw;
+}
+
+.productos_opciones_texto_etiquetas > p {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1vh 1vw 1vh 1vw;
+    border: var(--color-negro) solid 1.5px;
+    border-radius: 20px;
+}
+
+.productos_opciones_texto_bottom {
+    display: flex;
+    justify-content: right;
+}
+
+.productos_opciones_texto_bottom > a {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 1vh 1vw 1vh 1vw;
+    border: var(--color-negro) solid 1.5px;
+    border-radius: 10px;
+    background-color: var(--color-negro);
+}
+
+
+
+
 
 /* SECTION EXPLICACION */
 .explicacion {
     box-sizing: border-box;
     margin: 0;
-    padding: 50vh 10vw;
-    background-color: rgb(225, 0, 255);
+    padding: 30vh 10vw;
+    background-color: var(--color-blanco);
 }
+
+
+
+
+
 
 /* SECTION GENERO DEL MES */
 .genero_del_mes {
     box-sizing: border-box;
     margin: 0;
-    padding: 10vh 10vw 3vh 10vw;
-    background-color: rgb(255, 0, 191);
+    padding: 10vh 10vw 6vh 10vw;
+    background-color: var(--color-blanco);
 }
 
 .genero_titulo {
@@ -157,11 +237,16 @@ p {
     z-index: 10;
 }
 
+
+
+
+
+
 /* FOOTER */
 .footer {
     box-sizing: border-box;
     margin: 0;
-    padding: 11vh 10vw 0vh 10vw;
+    padding: 14vh 10vw 0vh 10vw;
     background-color: rgb(255, 0, 0);
 }
 
@@ -208,7 +293,7 @@ p {
 .footer_info {
     display: flex;
     justify-content: right;
-    border-top: black solid 2px;
+    border-top: var(--color-negro) solid 2px;
 }
 
 .footer_info > p {
