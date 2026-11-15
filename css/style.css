@@ -75,6 +75,13 @@ p {
 
 
 
+
+
+
+
+
+
+/* INDEX HTML */
 /* SECTION HIRO */
 .hiro {
     box-sizing: border-box;
@@ -117,6 +124,14 @@ p {
     justify-content: center;
     flex-direction: column;
     background-color: var(--color-blanco);
+    width: 30vw;
+    height: auto;
+}
+
+#img_disco {
+    width: 30vw;
+    height: auto;
+    background-color: #003C38;
 }
 
 .productos_opciones_texto > div {
@@ -234,6 +249,51 @@ p {
     position: relative;  
     z-index: 10;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CATEGORIAS HTML */
+/* SECCION CATALOGO */
+.titulo {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50vh 10vw;
+    background-color: aqua;
+}
+
+.filtro {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 50vh 10vw;
+    background-color: rgb(238, 255, 0);
+}
+
+.catalogo {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10vh 10vw 0vh 10vw;
+    background-color: rgb(0, 255, 0);
+}
+
+.catalogo > div {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0vh 0vw 10vh 0vw;
+}
+
+
+
 
 
 
