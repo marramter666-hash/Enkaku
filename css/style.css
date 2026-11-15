@@ -12,9 +12,14 @@
     --fuente-tercero: ;
 
     /* TAMAÑO TEXTO */
-    --fuente-grande: ;
-    --fuente-mediano: ;
-    --fuente-pequeño: ;
+    --tamaño-08px: 0.5rem;
+    --tamaño-12px: 0.75rem;
+    --tamaño-14px: 0.875rem;
+    --tamaño-16px: 1rem;
+    --tamaño-18px: 1.125rem;
+    --tamaño-20px: 1.25rem;
+    --tamaño-24px: 1.5rem;
+    --tamaño-32px: 2rem;
 }
 
 * {
@@ -39,6 +44,26 @@ p {
     font-weight: 400;
 }
 
+/* TEXTO */
+.disco_nombre {
+    font-size: var(--tamaño-12px);
+}
+
+.disco_autor {
+    font-size: var(--tamaño-18px);
+}
+
+.disco_precio {
+    font-size: var(--tamaño-14px);
+}
+
+.disco_japones {
+    font-size: var(--tamaño-14px);
+}
+
+.disco_etiquetas {
+    font-size: var(--tamaño-12px);
+}
 
 
 
@@ -100,7 +125,7 @@ p {
 
 .productos_titulo {
     margin: 5vh 0vw;
-    padding: 5vh 1vw 1vh 1vw;
+    padding: 5vh 0vw 0vh 0vw;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -109,13 +134,17 @@ p {
 
 .productos_nuevos {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
     gap: 3vw;
 }
 
 .productos_opciones {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: stretch;
     flex: 1 1 280px;
 }
 
@@ -123,21 +152,29 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--color-blanco);
-    width: 30vw;
+    overflow: hidden;
+    width: 100%;
     height: auto;
 }
 
-#img_disco {
-    width: 30vw;
+.productos_opciones_img img {
+    width: 100%;
     height: auto;
-    background-color: #003C38;
+    display: block;
+    object-fit: cover;
+}
+
+.productos_opciones_texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 }
 
 .productos_opciones_texto > div {
     box-sizing: border-box;
     margin: 0;
-    padding: 3vh 0vw 0vh 0vw;
+    padding: 2vh 0vw 0vh 0vw;
 }
 
 /* .productos_opciones_texto_nombre */
@@ -145,6 +182,8 @@ p {
 .productos_opciones_texto_autor {
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
 }
 
 .productos_opciones_texto_etiquetas {
