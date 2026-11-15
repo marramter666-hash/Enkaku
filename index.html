@@ -3,111 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enkaku</title>
-    <link rel="icon" type="image/svg+xml" href="IMG/KAKU1.png">
-    <link rel="stylesheet" href="css/style.css">
+    <title>| Enkaku &copy;</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
     <header class="header">
         <nav>
-            <img src="IMG/KAKU1.png" alt="">
             <div>
-                <div>
-                    <a href="categorias.html">Catálogo</a>
-                </div>
-                <div>
-                    <a href="formulario.html">Formulario</a>
-                </div>
-                <div>
-                    <a href="index.html">Home</a>
-                </div>
+                <a href="categorias.html">Catálogo</a>
+            </div>
+            <div>
+                <a href="formulario.html">Formulario</a>
+            </div>
+            <div>
+                <a href="index.html">Home</a>
+            </div>
+            <div>
+                <a href="">Home</a>
             </div>
         </nav>
     </header>
 
-    <section class="hiro"></section>
-    <section class="productos">
-        <div>
+    <section id="inicio" class="hiro">
+        <div class="content">
+            <!-- HERO SECTION -->
+            <img src="../assets/img/logo_enkaku.svg" alt="Enkaku">
+            <div class="flex-labels">
+                <ul>
+                    <li>SALSA DURA</li>
+                    <li>LATIN JAZZ</li>
+                    <li>SHIMOKITAZAWA</li>
+                    <li>TOKIO, JAPÓN</li>
+                    <li>
+                        <span id="hora-jp-seg"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="productos section catalogo">
+        <div class="content">
             <div class="productos_titulo">
-                <div>
-                    <p class="enunciado_español">RECIÉN LLEGADOS ·</p>
-                    <p class="enunciado_japones">新入荷</p>
+                <div class="titulo-seccion">
+                    <h1 class="txt-es" data-jp="· 新入荷">Recién llegados <span class="txt-jp"></span></h1>
                 </div>
-                <div>
-                    <a href="">Ver catálogo completo</a>
+                <div class="btn-seccion">
+                    <a href="/catalogo/" class="btn-catalogo">Ver catálogo completo</a>
                 </div>
             </div>
-            <div class="productos_nuevos">
-                <div class="productos_opciones">
+            <div id="productos_nuevos" class="productos_nuevos">
+                <div class="productos_opciones" data-id="0" data-genero="salsa" data-estado="segunda-mano" data-condicion="muy-bueno">
                     <div class="productos_opciones_img">
-                        <img src="IMG/IMG_PRUEBA.png" alt="">
+                        <img src="assets/img/portada_celia_jonny.jpg" alt="CELIA CRUZ & JOHNNY PACHECO">
                     </div>
                     <div class="productos_opciones_texto">
                         <div class="productos_opciones_texto_nombre">
                             <p class="disco_nombre">CELIA CRUZ & JOHNNY PACHECO</p>
                         </div>
-                        <div>
+                        <div class="productos_opciones_info">
                             <div class="productos_opciones_texto_autor">
-                                <p class="disco_autor">Celia & Johnny</p>
-                                <p class="disco_precio">¥8,800</p>
-                            </div>
-                            <p class="disco_japones">セリア&ジョニー LP</p>
+                                <h3 class="disco_autor txt-es">Celia & Johnny <span class="disco_japones">セリア&ジョニー LP</span></h3>
+                                </div>
+                            <p class="disco_precio">¥8,800</p>
                         </div>
                         <div class="productos_opciones_texto_etiquetas">
                             <p class="disco_etiquetas">Segunda mano</p>
                             <p class="disco_etiquetas">Muy bueno (VG+)</p>
                         </div>
                         <div class="productos_opciones_texto_bottom">
-                            <a href="">Reservar</a>
+                            <a href="" class="btn-reservar">Reservar</a>
                         </div>
                     </div>
                 </div>
-                <div class="productos_opciones">
+                <div class="productos_opciones" data-id="1" data-genero="salsa" data-estado="segunda-mano" data-condicion="como-nuevo">
                     <div class="productos_opciones_img">
-                        <img src="IMG/IMG_PRUEBA.png" alt="">
+                        <img src="assets/img/portada_cosa_nuestra.jpg" alt="Cosa Nuestra">
                     </div>
                     <div class="productos_opciones_texto">
                         <div class="productos_opciones_texto_nombre">
                             <p class="disco_nombre">WILLIE COLÓN & HÉCTOR LAVOE</p>
                         </div>
-                        <div>
+                        <div class="productos_opciones_info">
                             <div class="productos_opciones_texto_autor">
-                                <p class="disco_autor">Cosa Nuestra</p>
-                                <p class="disco_precio">¥12,800</p>
-                            </div>
-                            <p class="disco_japones">コーサ・ヌエストラ LP</p>
+                                <h3 class="disco_autor txt-es">Cosa Nuestra <span class="disco_japones">コーサ・ヌエストラ LP</span></h3>
+                                </div>
+                            <p class="disco_precio">¥12,800</p>
                         </div>
                         <div class="productos_opciones_texto_etiquetas">
                             <p class="disco_etiquetas">Segunda mano</p>
                             <p class="disco_etiquetas">Como nuevo (M / NM)</p>
                         </div>
                         <div class="productos_opciones_texto_bottom">
-                            <a href="">Reservar</a>
+                            <a href="" class="btn-reservar">Reservar</a>
                         </div>
                     </div>
                 </div>
-                <div class="productos_opciones">
+                <div class="productos_opciones" data-id="2" data-genero="latin-jazz" data-estado="nuevo">
                     <div class="productos_opciones_img">
-                        <img src="IMG/IMG_PRUEBA.png" alt="">
+                        <img src="assets/img/portada_mambo_diablo.jpg" alt="Mambo Diablo">
                     </div>
                     <div class="productos_opciones_texto">
                         <div class="productos_opciones_texto_nombre">
                             <p class="disco_nombre">TITO PUENTE</p>
                         </div>
-                        <div>
+                        <div class="productos_opciones_info">
                             <div class="productos_opciones_texto_autor">
-                                <p class="disco_autor">Mambo Diablo</p>
-                                <p class="disco_precio">¥4,800</p>
-                            </div>
-                            <p class="disco_japones">マンボ・ディアブロ LP</p>
+                                <h3 class="disco_autor txt-es">Mambo Diablo <span class="disco_japones">マンボ・ディアブロ LP</span></h3>
+                                </div>
+                            <p class="disco_precio">¥4,800</p>
                         </div>
                         <div class="productos_opciones_texto_etiquetas">
                             <p class="disco_etiquetas">Nuevo</p>
                         </div>
                         <div class="productos_opciones_texto_bottom">
-                            <a href="">Reservar</a>
+                            <a href="" class="btn-reservar">Reservar</a>
                         </div>
                     </div>
                 </div>
@@ -115,24 +127,56 @@
         </div>
     </section>
 
-    <section class="explicacion">
-        <div>
-            <div>
-                <p class="enunciado_español">LA TIENDA ·</p>
-                <p class="enunciado_japones">お店について</p>
-            </div>
-            <div>
-                <p class="parrafo">Enkaku es una pequeña tienda de vinilos en Shimokitazawa dedicada a la salsa dura y al latin jazz. Nace de una conexión poco conocida entre Japón y la música latina, que vivió su momento más brillante con la Orquesta de la Luz. Seleccionamos cada disco a mano, nuevo o de segunda mano, y lo guardamos para ti hasta que pases a recogerlo o te lo enviamos allá donde estés.</p>
-                <p class="parrafo">下北沢の小さなレコード店から、熱いサルサを世界へ。</p>
-            </div>
+    <section class="explicacion section">
+        <div class="content">
+            <p>LA TIENDA · お店について</p>
+            <p>Enkaku es una pequeña tienda de vinilos en Shimokitazawa dedicada a la salsa dura y al latin jazz. Nace de una conexión poco conocida entre Japón y la música latina, que vivió su momento más brillante con la Orquesta de la Luz. Seleccionamos cada disco a mano, nuevo o de segunda mano, y lo guardamos para ti hasta que pases a recogerlo o te lo enviamos allá donde estés. 下北沢の小さなレコード店から、熱いサルサを世界へ。</p>
         </div>
     </section>
 
-    <section class="genero_del_mes">
+    <!-- ============ VENTANA MODAL (una sola para todos) ============ -->
+        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-hidden="true">
+            <div class="modal__caja">
+                <button type="button" class="modal__cerrar" id="modal-cerrar" aria-label="Cerrar">×</button>
+
+                <!-- Izquierda: portada + vinilo girando detrás -->
+                <div class="modal__media">
+                    <div class="modal__vinilo" aria-hidden="true"></div>
+                    <img class="modal__portada" id="modal-portada" src="" alt="">
+                </div>
+
+                <!-- Derecha: información -->
+                <div class="modal__contenido">
+                    <p class="modal__artista" id="modal-artista"></p>
+                    <h2 class="modal__titulo txt-es" id="modal-titulo"><span id="modal-titulo-es"></span><span class="txt-jp"></span></h2>
+                    <p class="modal__meta" id="modal-meta"></p>
+                    <div class="modal__chips" id="modal-chips"></div>
+                    <p class="modal__texto txt-es"><span id="modal-texto-es"></span><span class="txt-jp"></span></p>
+
+                    <div class="modal__player" id="modal-player">
+                        <div class="modal__player-info">
+                            <span class="modal__player-label txt-es" data-jp="試聴">Escucha <span class="txt-jp"></span></span>
+                            <span class="modal__player-track" id="modal-track"></span>
+                        </div>
+                        <span class="modal__player-tiempo" id="modal-tiempo">00:00/00:00</span>
+                        <button type="button" class="modal__play" id="modal-play" aria-label="Reproducir">
+                            <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                            <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+                        </button>
+                    </div>
+
+                    <div class="modal__pie">
+                        <span class="modal__precio" id="modal-precio"></span>
+                        <a href="../reservar/" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <section class="genero_del_mes section">
         <div class="genero_titulo">
             <div>
-                <p class="enunciado_español">GÉNERO DEL MES ·</p>
-                <p class="enunciado_japones">今月のジャンル</p>
+                <p>GÉNERO DEL MES · </p><p>今月のジャンル</p>
             </div>
             <div>
                 <p>01 / 06</p>
@@ -140,53 +184,72 @@
         </div>
         <div class="genero_fila">
             <div class="genero_disco">
-                <img src="IMG/KAKU1.png" alt="">
-                <div class="genero_disco_portada">
-                    <p class="genero_disco_">BOOGALOO</p>
-                    <p class="genero_disco_">ブーガルー</p>
-                    <p class="genero_disco_">NUEVA YORK · 1966–1969</p>
+                <img src="assets/img/KAKU1.png" alt="">
+                <div>
+                    <p>BOOGALOO</p>
+                    <p>ブーガルー</p>
+                    <p>NUEVA YORK · 1966–1969</p>
                 </div>
             </div>
             <div class="genero_disco">
-                <img src="IMG/KAKU1.png" alt="">
-                <div class="genero_disco_texto">
-                    <p class="genero_disco_">PETE RODRIGUEZ</p>
-                    <div>
-                        <div>
-                            <p class="genero_disco_">I Like It Like That</p>
-                            <p class="genero_disco_">¥8,800</p>
-                        </div>
-                        <p class="genero_disco_">アイ・ライク・イット・ライク・ザット LP </p>
-                    </div>
-                    <p class="genero_disco_">1967 · ALEGRE RECORDS</p>
-                    <div>
-                        <p class="genero_disco_">Segunda mano</p>
-                        <p class="genero_disco_">Bueno (VG)</p>
-                    </div>
-                    <div class="productos_opciones_texto_bottom">
-                        <p class="genero_disco_">Reservar</p>
-                    </div>
+                <img src="assets/img/KAKU1.png" alt="">
+                <div>
+                    <p>BOOGALOO</p>
+                    <p>ブーガルー</p>
+                    <p>NUEVA YORK · 1966–1969</p>
+                </div>
+            </div>
+            <div class="genero_disco">
+                <img src="assets/img/KAKU1.png" alt="">
+                <div>
+                    <p>BOOGALOO</p>
+                    <p>ブーガルー</p>
+                    <p>NUEVA YORK · 1966–1969</p>
+                </div>
+            </div>
+            <div class="genero_disco">
+                <img src="assets/img/KAKU1.png" alt="">
+                <div>
+                    <p>BOOGALOO</p>
+                    <p>ブーガルー</p>
+                    <p>NUEVA YORK · 1966–1969</p>
+                </div>
+            </div>
+            <div class="genero_disco">
+                <img src="assets/img/KAKU1.png" alt="">
+                <div>
+                    <p>BOOGALOO</p>
+                    <p>ブーガルー</p>
+                    <p>NUEVA YORK · 1966–1969</p>
+                </div>
+            </div>
+            <div class="genero_disco">
+                <img src="assets/img/KAKU1.png" alt="">
+                <div>
+                    <p>BOOGALOO</p>
+                    <p>ブーガルー</p>
+                    <p>NUEVA YORK · 1966–1969</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="footer_texto">
+    <footer class="footer section">
+        <div class="footer_texto content">
             <div>
                 <div class="footer_texto_titulo">
                     <p class="footer_titulo_español">ACCESO ·</p><p class="footer_titulo_japones">アクセス</p>
                 </div>
                 <div class="footer_texto_texto">
                     <div>
-                        <p class="footer_texto_español">Clave Building 2F, 2-14-7 Kitazawa
+                        <p class="footer_texto_espanol">Clave Building 2F, 2-14-7 Kitazawa
                         Setagaya-ku, Tokio 155-0031, Japón</p>
                     </div>
                     <div>
                         <p class="footer_texto_japones">〒155-0031 東京都世田谷区北沢2丁目14-7 クラーベビル2F</p>
                     </div>
                     <div>
-                        <p class="footer_texto_español">A 4 minutos a pie de la estación de Shimokitazawa</p>
+                        <p class="footer_texto_espanol">A 4 minutos a pie de la estación de Shimokitazawa</p>
                     </div>
                     <div>
                         <p class="footer_texto_japones">下北沢駅から徒歩4分</p>
@@ -199,7 +262,7 @@
                 </div>
                 <div class="footer_texto_texto">
                     <div>
-                        <p class="footer_texto_español">Martes a domingo, 12:00–20:00 Lunes cerrado.</p>
+                        <p class="footer_texto_espanol">Martes a domingo, 12:00–20:00 Lunes cerrado.</p>
                     </div>
                     <div>
                         <p class="footer_texto_japones">定休日：月曜</p>
@@ -212,16 +275,16 @@
                 </div>
                 <div class="footer_texto_texto">
                     <div>
-                        <a class="footer_texto_español" href="">Inicio</a>
+                        <a class="footer_texto_espanol" href="">Inicio</a>
                     </div>
                     <div>
-                        <a class="footer_texto_español" href="">Catálogo</a>
+                        <a class="footer_texto_espanol" href="">Catálogo</a>
                     </div>
                     <div>
-                        <a class="footer_texto_español" href="">Reserva</a>
+                        <a class="footer_texto_espanol" href="">Reserva</a>
                     </div>
                     <div>
-                        <a class="footer_texto_español" href="">La tienda</a>
+                        <a class="footer_texto_espanol" href="">La tienda</a>
                     </div>
                 </div>
             </div>
@@ -231,25 +294,26 @@
                 </div>
                 <div class="footer_texto_texto">
                     <div>
-                        <p class="footer_texto_español">hola@enkaku.jp</p>
+                        <p class="footer_texto_espanol">hola@enkaku.jp</p>
                     </div>
                     <div>
-                        <p class="footer_texto_español">+81 3-1234-5678</p>
+                        <p class="footer_texto_espanol">+81 3-1234-5678</p>
                     </div>
                     <div>
-                        <p class="footer_texto_español">Instagram @enkaku.records</p>
+                        <p class="footer_texto_espanol">Instagram @enkaku.records</p>
                     </div>
                 </div>
             </div>
-            
         </div>
-        <div class="footer_img">
-            <img src="IMG/KAKU1.png" alt="KAKU1">
+        <div class="footer_img content">
+            <img src="assets/img/KAKU1.png" alt="KAKU1">
         </div>
-        <div class="footer_info">
+        <div class="footer_info content">
             <p>© 2026 Enkaku</p>
         </div>
     </footer>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/modal.js"></script>
 </body>
 </html>

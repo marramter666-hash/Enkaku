@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| Enkaku &copy;</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- <header class="header">
+        <nav>
+            <div>
+                <a href="categorias.html">Catálogo</a>
+            </div>
+            <div>
+                <a href="formulario.html">Formulario</a>
+            </div>
+            <div>
+                <a href="index.html">Home</a>
+            </div>
+            <div>
+                <a href="">Home</a>
+            </div>
+        </nav>
+    </header> -->
+
+    <section id="inicio" class="hiro">
+        <div class="content">
+            <!-- HERO SECTION -->
+            <img src="../assets/img/logo_enkaku.svg" alt="Enkaku">
+            <div class="flex-labels">
+                <ul>
+                    <li>SALSA DURA</li>
+                    <li>LATIN JAZZ</li>
+                    <li>SHIMOKITAZAWA</li>
+                    <li>TOKIO, JAPÓN</li>
+                    <li>
+                        <span id="hora-jp-seg"></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="catalogo" class="productos section catalogo">
+        <div class="content">
+            <div class="productos_titulo">
+                <div class="titulo-seccion">
+                    <h1 class="txt-es" data-jp="· カタログ">Catálogo <span class="txt-jp"></span></h1>
+                </div>
+            </div>
+            <div class="filtros" id="filtros" role="toolbar" aria-label="Filtros del catálogo">
+                    <div class="filtros-genero">
+                        <button type="button" class="filtro is-active" data-grupo="genero" data-valor="" aria-pressed="true">Todos</button>
+                        <button type="button" class="filtro" data-grupo="genero" data-valor="salsa" aria-pressed="false">Salsa</button>
+                        <button type="button" class="filtro" data-grupo="genero" data-valor="latin-jazz" aria-pressed="false">Latin jazz</button>
+                        <button type="button" class="filtro" data-grupo="genero" data-valor="boogaloo" aria-pressed="false">Boogaloo</button>
+                    </div>
+                    <span class="filtros__sep" aria-hidden="true"></span>
+                    <div class="filtros-estado">
+                        <button type="button" class="filtro" data-grupo="estado" data-valor="nuevo" aria-pressed="false">Nuevo</button>
+                        <button type="button" class="filtro" data-grupo="estado" data-valor="segunda-mano" aria-pressed="false">Segunda mano</button>
+                    </div>
+                 </div>
+            <div id="catalogo-list" class="productos_nuevos"></div>
+        </div>
+    </section>
+
+    <!-- ============ VENTANA MODAL (una sola para todos) ============ -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-hidden="true">
+        <div class="modal__caja">
+            <button type="button" class="modal__cerrar" id="modal-cerrar" aria-label="Cerrar">×</button>
+
+            <!-- Izquierda: portada + vinilo girando detrás -->
+            <div class="modal__media">
+                <div class="modal__vinilo" aria-hidden="true"></div>
+                <img class="modal__portada" id="modal-portada" src="" alt="">
+            </div>
+
+            <!-- Derecha: información -->
+            <div class="modal__contenido">
+                <p class="modal__artista" id="modal-artista"></p>
+                <h2 class="modal__titulo txt-es" id="modal-titulo"><span id="modal-titulo-es"></span><span class="txt-jp"></span></h2>
+                <p class="modal__meta" id="modal-meta"></p>
+                <div class="modal__chips" id="modal-chips"></div>
+                <p class="modal__texto txt-es"><span id="modal-texto-es"></span><span class="txt-jp"></span></p>
+
+                <div class="modal__player" id="modal-player">
+                    <div class="modal__player-info">
+                        <span class="modal__player-label txt-es" data-jp="試聴">Escucha <span class="txt-jp"></span></span>
+                        <span class="modal__player-track" id="modal-track"></span>
+                    </div>
+                    <button type="button" class="modal__play" id="modal-play" aria-label="Reproducir">
+                        <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+                    </button>
+                    <span class="modal__player-tiempo" id="modal-tiempo">00:00/00:00</span>
+                </div>
+
+                <div class="modal__pie">
+                    <span class="modal__precio" id="modal-precio"></span>
+                    <a href="../reservar/" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer section">
+        <div class="footer_texto content">
+            <div>
+                <div class="footer_texto_titulo">
+                    <p class="footer_titulo_español">ACCESO ·</p><p class="footer_titulo_japones">アクセス</p>
+                </div>
+                <div class="footer_texto_texto">
+                    <div>
+                        <p class="footer_texto_espanol">Clave Building 2F, 2-14-7 Kitazawa
+                        Setagaya-ku, Tokio 155-0031, Japón</p>
+                    </div>
+                    <div>
+                        <p class="footer_texto_japones">〒155-0031 東京都世田谷区北沢2丁目14-7 クラーベビル2F</p>
+                    </div>
+                    <div>
+                        <p class="footer_texto_espanol">A 4 minutos a pie de la estación de Shimokitazawa</p>
+                    </div>
+                    <div>
+                        <p class="footer_texto_japones">下北沢駅から徒歩4分</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="footer_texto_titulo">
+                    <p class="footer_titulo_español">HORARIO ·</p><p class="footer_titulo_japones">営業時間</p>
+                </div>
+                <div class="footer_texto_texto">
+                    <div>
+                        <p class="footer_texto_espanol">Martes a domingo, 12:00–20:00 Lunes cerrado.</p>
+                    </div>
+                    <div>
+                        <p class="footer_texto_japones">定休日：月曜</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="footer_texto_titulo">
+                    <p class="footer_titulo_español">NAVEGACIÓN ·</p><p class="footer_titulo_japones">メニュー</p>
+                </div>
+                <div class="footer_texto_texto">
+                    <div>
+                        <a class="footer_texto_espanol" href="">Inicio</a>
+                    </div>
+                    <div>
+                        <a class="footer_texto_espanol" href="">Catálogo</a>
+                    </div>
+                    <div>
+                        <a class="footer_texto_espanol" href="">Reserva</a>
+                    </div>
+                    <div>
+                        <a class="footer_texto_espanol" href="">La tienda</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="footer_texto_titulo">
+                    <p class="footer_titulo_español">CONTACTO ·</p><p class="footer_titulo_japones">SNS</p>
+                </div>
+                <div class="footer_texto_texto">
+                    <div>
+                        <p class="footer_texto_espanol">hola@enkaku.jp</p>
+                    </div>
+                    <div>
+                        <p class="footer_texto_espanol">+81 3-1234-5678</p>
+                    </div>
+                    <div>
+                        <p class="footer_texto_espanol">Instagram @enkaku.records</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_img content">
+            <img src="../assets/img/KAKU1.png" alt="KAKU1">
+        </div>
+        <div class="footer_info content">
+            <p>© 2026 Enkaku</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script src="../assets/js/modal.js"></script>
+</body>
+</html>
