@@ -1,15 +1,50 @@
+
+@font-face {
+    font-family: "Noto Sans JP";
+    src: url('../fonts/NotoSansJP-Medium.woff2') format('woff2'),
+        url('../fonts/NotoSansJP-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "PP Gatwick Jumbo Semibold";
+    src: url('../fonts/PPGatwick-JumboSemibold.woff2') format('woff2'),
+        url('../fonts/PPGatwick-JumboSemibold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "PP Neue Montreal Medium";
+    src: url('../fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
+        url('../fonts/PPNeueMontreal-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "PP Neue Montreal Mono Medium";
+    src: url('../fonts/PPNeueMontrealMono-Medium.woff2') format('woff2'),
+        url('../fonts/PPNeueMontrealMono-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     /* COLORES */
     --color-blanco: #FFFFFF;
-    --color-negro: #000000;
+    --color-negro: #191919;
+    --color-gris: #717171;
     --color-azul: #003C38;
     --color-rosa: #F892C5;
     --color-amarillo: #FFC20E;
 
-    /* FUENTES */
+    /* FUENTES
     --fuente-principal: ;
     --fuente-segundo: ;
-    --fuente-tercero: ;
+    --fuente-tercero: ; */
 
     /* TAMAÑO TEXTO */
     --tamaño-08px: 0.5rem;
@@ -23,10 +58,13 @@
     --tamaño-36px: 2.25rem;
 }
 
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: #191919;
 }
 
 a {
@@ -36,9 +74,9 @@ a {
     font-weight: 400;
 }
 
-a:hover {
+/* a:hover {
     color: chartreuse;
-}
+} */
 
 p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -164,15 +202,18 @@ p {
 
 
 /* INDEX HTML */
-/* SECTION HIRO */
-.hiro {
+/* SECTION PRODUCTOS */
+.titulo {
     box-sizing: border-box;
     margin: 0;
     padding: 50vh 10vw;
     background-color: aqua;
 }
 
-/* SECTION PRODUCTOS */
+
+
+
+
 .productos {
     box-sizing: border-box;
     margin: 0;
@@ -411,11 +452,39 @@ genero_disco_texto
 
 /* CATEGORIAS HTML */
 /* SECCION CATALOGO */
-.titulo {
+
+
+/* SECTION HIRO */
+.hiro {
     box-sizing: border-box;
     margin: 0;
-    padding: 50vh 10vw;
-    background-color: aqua;
+    /* height: 100vh; */
+    padding-top: 95px;
+    /* padding: 50vh 10vw; */
+    /* background-color: aqua; */
+}
+#inicio .content {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+}
+
+#inicio .content img {
+    width: 100%;
+}
+
+#inicio .content .flex-labels {
+    padding: 0;
+}
+
+#inicio .content .flex-labels ul {
+    font-family: "PP Neue Montreal Mono Medium";
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
 }
 
 .filtro {
