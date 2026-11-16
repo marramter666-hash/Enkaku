@@ -155,7 +155,7 @@ p {
     justify-content: space-between;
     align-items: center;
     gap: 3vw;
-    background-color: black;
+    background-color: var(--color-negro);
     border-radius: 15px;
     position: fixed;
     top: 1vh;
@@ -488,7 +488,7 @@ genero_disco_texto
 .filtro {
     box-sizing: border-box;
     margin: 0;
-    padding: 50vh 10vw;
+    padding: 5vh 2vw;
     background-color: rgb(238, 255, 0);
 }
 

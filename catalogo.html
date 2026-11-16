@@ -46,7 +46,69 @@
         </div>
     </section>
 
-    <section class="filtro"></section>
+    <section id="catalogo" class="productos section catalogo">
+        <div class="content">
+            <div class="productos_titulo">
+                <div class="titulo-seccion">
+                    <p class="txt-es" data-jp="· カタログ">Catálogo <span class="txt-jp"></span></p>
+                </div>
+            </div>
+            <div class="filtros" id="filtros" role="toolbar" aria-label="Filtros del catálogo">
+                    <div class="filtros-genero">
+                        <button type="button" class="filtro is-active" data-grupo="genero" data-valor="" aria-pressed="true">Todos</button>
+                        <button type="button" class="filtro" data-grupo="genero" data-valor="salsa" aria-pressed="false">Salsa</button>
+                        <button type="button" class="filtro" data-grupo="genero" data-valor="latin-jazz" aria-pressed="false">Latin jazz</button>
+                        <button type="button" class="filtro" data-grupo="genero" data-valor="boogaloo" aria-pressed="false">Boogaloo</button>
+                    </div>
+                    <span class="filtros__sep" aria-hidden="true"></span>
+                    <div class="filtros-estado">
+                        <button type="button" class="filtro" data-grupo="estado" data-valor="nuevo" aria-pressed="false">Nuevo</button>
+                        <button type="button" class="filtro" data-grupo="estado" data-valor="segunda-mano" aria-pressed="false">Segunda mano</button>
+                    </div>
+                 </div>
+            <div id="catalogo-list" class="productos_nuevos"></div>
+        </div>
+    </section>
+
+    <!-- ============ VENTANA MODAL (una sola para todos) ============ -->
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo" aria-hidden="true">
+        <div class="modal__caja">
+            <button type="button" class="modal__cerrar" id="modal-cerrar" aria-label="Cerrar">×</button>
+
+            <!-- Izquierda: portada + vinilo girando detrás -->
+            <div class="modal__media">
+                <div class="modal__vinilo" aria-hidden="true"></div>
+                <img class="modal__portada" id="modal-portada" src="" alt="">
+            </div>
+
+            <!-- Derecha: información -->
+            <div class="modal__contenido">
+                <p class="modal__artista" id="modal-artista"></p>
+                <h2 class="modal__titulo txt-es" id="modal-titulo"><span id="modal-titulo-es"></span><span class="txt-jp"></span></h2>
+                <p class="modal__meta" id="modal-meta"></p>
+                <div class="modal__chips" id="modal-chips"></div>
+                <p class="modal__texto txt-es"><span id="modal-texto-es"></span><span class="txt-jp"></span></p>
+
+                <div class="modal__player" id="modal-player">
+                    <div class="modal__player-info">
+                        <span class="modal__player-label txt-es" data-jp="試聴">Escucha <span class="txt-jp"></span></span>
+                        <span class="modal__player-track" id="modal-track"></span>
+                    </div>
+                    <button type="button" class="modal__play" id="modal-play" aria-label="Reproducir">
+                        <svg class="ico-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="ico-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+                    </button>
+                    <span class="modal__player-tiempo" id="modal-tiempo">00:00/00:00</span>
+                </div>
+
+                <div class="modal__pie">
+                    <span class="modal__precio" id="modal-precio"></span>
+                    <a href="../reservar/" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <section class="catalogo">
         <div class="productos_nuevos">
             <div class="productos_opciones">
