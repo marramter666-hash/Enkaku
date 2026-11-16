@@ -39,11 +39,6 @@
     --color-rosa: #F892C5;
     --color-amarillo: #FFC20E;
 
-    /* FUENTES */
-    --fuente-principal: ;
-    --fuente-segundo: ;
-    --fuente-tercero: ;
-
     /* TAMAÑO TEXTO */
     --tamaño-08px: 0.5rem;
     --tamaño-12px: 0.75rem;
@@ -86,93 +81,6 @@ h2 {
   margin: 0 auto;
   padding: 48px 0;
 }
-/* a:hover {
-    color: chartreuse;
-} */
-
-/* p {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
-} */
-
-/* TEXTO */
-/* .disco_nombre {
-    font-size: var(--tamaño-12px);
-}
-
-.disco_autor {
-    font-size: var(--tamaño-18px);
-}
-
-.disco_precio {
-    font-size: var(--tamaño-14px);
-}
-
-.disco_japones {
-    font-size: var(--tamaño-14px);
-}
-
-.disco_etiquetas {
-    font-size: var(--tamaño-12px);
-} */
-
-
-.footer_titulo_español {
-    font-size: var(--tamaño-24px);
-    color: var(--color-blanco);
-}
-
-.footer_titulo_japones {
-    font-family: "Noto Sans JP";
-    font-size: var(--tamaño-18px);
-    color: var(--color-blanco);
-}
-
-.footer_texto_espanol {
-    font-family: "PP Neue Montreal Medium";
-    font-size: var(--tamaño-14px);
-    color: var(--color-blanco);
-}
-
-.footer_texto_japones {
-    font-family: "Noto Sans JP";
-    font-size: var(--tamaño-14px);
-    color: var(--color-blanco);
-}
-.footer_info.content {
-    padding: 0;
-}
-
-
-
-
-/* HEADER */
-.header > nav {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 2vh 49vw;
-    display: flex;
-    justify-content: space-around;
-    gap: 3vw;
-    background-color: black;
-    border-radius: 15px;
-    position: fixed;
-    top: 1vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    max-width: 90%;
-    z-index: 1000;
-}
-
-
-.header > nav > div {
-    box-sizing: border-box;
-    margin: 0vh 0vw;
-    padding: 1vh 2vw;
-    background-color: var(--color-blanco);
-    border-radius: 10px;
-}
 
 
 /* INDEX HTML */
@@ -180,15 +88,13 @@ h2 {
 .hiro {
     box-sizing: border-box;
     margin: 0;
-    /* height: 100vh; */
-    padding-top: 95px;
-    /* padding: 50vh 10vw; */
-    /* background-color: aqua; */
+    padding-top: 15vh;
 }
+
 #inicio .content {
     width: 100%;
     max-width: 100%;
-    padding: 12px;
+    padding: 2vh 2vw;
 }
 
 #inicio .content img {
@@ -206,72 +112,15 @@ h2 {
     list-style: none;
     display: flex;
     justify-content: space-between;
-    margin-top: 8px;
+    margin-top: 1vh;
 }
 
 /* SECTION PRODUCTOS */
-/* .productos {
+.productos {
     box-sizing: border-box;
     margin: 0;
-    padding: 12vh 10vw 4vh 10vw;
+    padding: 5vh 5vw 4vh 5vw;
     background-color: var(--color-blanco);
-}
-
-.productos_titulo {
-    margin: 5vh 0vw;
-    padding: 5vh 0vw 0vh 0vw;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.productos_nuevos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 24px;
-    margin-top: 32px;
-}
-
-.productos_opciones {
-    position: relative;
-    width: 384px;
-    max-width: 100%;
-    margin-bottom: 48px;
-}
-
-.productos_opciones_img {
-    width: 100%;
-}
-
-.productos_opciones_img img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-}
-
-.productos_opciones_texto {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1;
-}
-
-.productos_opciones_texto > div {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 2vh 0vw 0vh 0vw;
-} */
-
-/* .productos_opciones_texto_nombre */
-
-/* .productos_opciones_texto_autor {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
 }
 
 .productos_opciones_texto_etiquetas {
@@ -302,7 +151,7 @@ h2 {
     background-color: var(--color-negro);
     font-size: var(--tamaño-12px);
     color: var(--color-blanco);
-} */
+}
 
 .productos_nuevos {
   display: flex;
@@ -320,7 +169,7 @@ h2 {
 
 .productos_titulo .titulo-seccion {
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: var(--tamaño-24px);
     letter-spacing: -1%;
 }
 
@@ -837,198 +686,4 @@ body.modal-abierto {
     .footer_img.content img {
         width: 35%;
     }
-}
-
-
-
-
-/* SECTION EXPLICACION */
-.explicacion {
-    box-sizing: border-box;
-    /* margin: 0; */
-    /* padding: 30vh 10vw; */
-    margin-bottom: 96px;
-    background-color: var(--color-blanco);
-}
-
-
-
-
-
-
-/* SECTION GENERO DEL MES */
-.genero_del_mes {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 10vh 10vw 6vh 10vw;
-    background-color: var(--color-blanco);
-}
-
-.genero_titulo {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 3vh 0vw 2vh 0vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
-.genero_fila {
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    gap: 2vw;
-}
-
-.genero_disco {
-    aspect-ratio: 1 / 1;
-    width: 100%;
-    height: 34vw;
-    background-color: aqua;
-    display: grid;
-}
-
-.genero_disco > img {
-    grid-area: 1 / 1;
-    width: 100%;
-    height: 100%;
-    opacity: 0%;
-    object-fit: cover;
-}
-
-.genero_disco:hover > img {
-    transition: 0.4s;
-    opacity: 100%;
-}
-
-.genero_disco > div {
-    box-sizing: border-box;
-    margin: 0vh 0vw 0vh 0vw;
-    padding: 5vh 3vw;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    grid-area: 1 / 1;
-    position: relative;  
-    z-index: 10;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CATEGORIAS HTML */
-/* SECCION CATALOGO */
-.titulo {
-    box-sizing: border-box;
-    margin: 0;
-    /* padding: 50vh 10vw; */
-    background-color: aqua;
-}
-
-/* .filtro {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 50vh 10vw;
-    background-color: rgb(238, 255, 0);
-} */
-
-.catalogo {
-    box-sizing: border-box;
-    margin: 0;
-    /* padding: 10vh 10vw 0vh 10vw; */
-}
-
-.catalogo > div {
-    box-sizing: border-box;
-    margin: 0;
-    /* padding: 0vh 0vw 10vh 0vw; */
-}
-
-
-
-
-
-
-
-
-
-/* FOOTER */
-.footer {
-    box-sizing: border-box;
-    margin: 0;
-    /* padding: 20vh 10vw 0vh 10vw; */
-    background-color: var(--color-negro);
-}
-
-.footer_texto {
-    display: flex;
-    justify-content: space-around;
-    gap: 24px;
-}
-
-.footer_texto > div {
-    display: flex;
-    justify-content: baseline;
-    flex-direction: column;
-    align-items: baseline;
-    flex: 1;
-    min-width: 0;
-    
-}
-.footer_texto_texto {
-    display: flex;
-    gap: 16px;
-    flex-direction: column;
-}
-.footer_texto_titulo {
-    font-family: "PP Neue Montreal Mono Medium";
-    box-sizing: border-box;
-    margin: 0;
-    margin-bottom: 24px;
-    /* padding: 0vh 0vw 3vh 0vw; */
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    gap: 0.5vw;
-}
-
-.footer_texto_texto > div {
-    padding: 0vh 0vw 2vh 0vw;
-}
-
-.footer_img {
-    box-sizing: border-box;
-    margin: 2vh 0vw 4vh 0vw;
-    padding: 0;
-    display: flex;
-    justify-content: right;
-}
-
-.footer_info {
-    display: flex;
-    justify-content: right;
-    border-top: var(--color-blanco) solid 2px;
-    font-size: var(--tamaño-12px);
-    color: var(--color-blanco);
-}
-
-.footer_info > p {
-    font-family: "PP Neue Montreal Medium";
-    color: var(--color-blanco);
-    font-size: var(--tamaño-14px);
-    padding: 18px 0;
-    /* box-sizing: border-box;
-    margin: 0;
-    padding: 2vh 0vw 2vh 0vw; */
 }
