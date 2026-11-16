@@ -70,8 +70,7 @@
 a {
     text-decoration: none;
     color: var(--color-negro);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: 400;
+    font-family: "PP Neue Montreal Medium";
 }
 
 /* a:hover {
@@ -86,60 +85,71 @@ p {
 /* TEXTO */
 .enunciado_español {
     font-size: var(--tamaño-24px);
+    font-family: "PP Neue Montreal Mono Medium";
 }
 
 .enunciado_japones {
     font-size: var(--tamaño-20px);
+    font-family: "Noto Sans JP";
 }
 
 
 
 .disco_nombre {
     font-size: var(--tamaño-12px);
+    font-family: "PP Neue Montreal Mono Medium";
 }
 
 .disco_autor {
     font-size: var(--tamaño-18px);
+    font-family: "PP Gatwick Jumbo Semibold";
 }
 
 .disco_precio {
     font-size: var(--tamaño-14px);
+    font-family: "PP Neue Montreal Mono Medium";
 }
 
 .disco_japones {
     font-size: var(--tamaño-14px);
+    font-family: "Noto Sans JP";
 }
 
 .disco_etiquetas {
     font-size: var(--tamaño-12px);
+    font-family: "PP Neue Montreal Medium";
 }
 
 
 .parrafo {
     font-size: var(--tamaño-36px);
+    font-family: "PP Neue Montreal Medium";
 }
 
 
 .footer_titulo_español {
-    font-size: var(--tamaño-24px);
+    font-size: var(--tamaño-20px);
     color: var(--color-blanco);
     font-family: "PP Neue Montreal Mono Medium";
 }
 
 .footer_titulo_japones {
-    font-size: var(--tamaño-18px);
+    font-size: var(--tamaño-16px);
     color: var(--color-blanco);
+    font-family: "Noto Sans JP";
+
 }
 
 .footer_texto_español {
     font-size: var(--tamaño-14px);
     color: var(--color-blanco);
+    font-family: "PP Neue Montreal Medium";
 }
 
 .footer_texto_japones {
     font-size: var(--tamaño-14px);
     color: var(--color-blanco);
-    /* font-family: ; */
+    font-family: "Noto Sans JP";
 }
 
 
