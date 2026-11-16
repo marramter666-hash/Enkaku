@@ -123,6 +123,7 @@ p {
 .footer_titulo_español {
     font-size: var(--tamaño-24px);
     color: var(--color-blanco);
+    font-family: "PP Neue Montreal Mono Medium";
 }
 
 .footer_titulo_japones {
@@ -138,6 +139,7 @@ p {
 .footer_texto_japones {
     font-size: var(--tamaño-14px);
     color: var(--color-blanco);
+    /* font-family: ; */
 }
 
 
@@ -148,7 +150,7 @@ p {
 .header > nav {
     box-sizing: border-box;
     margin: 0;
-    padding: 2vh 49vw;
+    padding: 1vh 2vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -159,7 +161,7 @@ p {
     top: 1vh;
     left: 50%;
     transform: translateX(-50%);
-    width: max-content;
+    width: 90%;
     max-width: 90%;
     z-index: 1000;
 }
@@ -173,12 +175,12 @@ p {
 .header > nav > div {
     box-sizing: border-box;
     margin: 0vh 0vw;
-    padding: 1vh 2vw;
+    padding: 1vh 0vw;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3vw;
+    gap: 2vw;
 }
 
 .header > nav > div > div {
@@ -452,29 +454,24 @@ genero_disco_texto
 
 /* CATEGORIAS HTML */
 /* SECCION CATALOGO */
-
-
 /* SECTION HIRO */
 .hiro {
     box-sizing: border-box;
-    margin: 0;
-    /* height: 100vh; */
-    padding-top: 95px;
-    /* padding: 50vh 10vw; */
-    /* background-color: aqua; */
 }
+
 #inicio .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 100%;
-    padding: 12px;
+    padding: 15vh 0vw 3vh 0vw;
+    /* background-color: #003C38; */
 }
 
 #inicio .content img {
-    width: 100%;
-}
-
-#inicio .content .flex-labels {
-    padding: 0;
+    width: 90%;
 }
 
 #inicio .content .flex-labels ul {
@@ -485,6 +482,7 @@ genero_disco_texto
     display: flex;
     justify-content: space-between;
     margin-top: 8px;
+    gap: 14.3vw;
 }
 
 .filtro {
@@ -571,4 +569,5 @@ genero_disco_texto
     box-sizing: border-box;
     margin: 0;
     padding: 2vh 0vw 2vh 0vw;
+    color: var(--color-blanco);
 }
