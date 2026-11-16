@@ -206,11 +206,10 @@ h2 {
 .header > nav {
     box-sizing: border-box;
     margin: 0;
-    padding: 1vh 2vw;
+    padding: 1vh 1vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3vw;
     background-color: var(--color-negro);
     border-radius: 15px;
     position: fixed;
@@ -222,42 +221,66 @@ h2 {
     z-index: 1000;
 }
 
-.header > nav > img {
-    height: 4vh;
+.header > nav > div > img {
+    height: 30px;
     width: auto;
 }
 
 .header > nav > div {
-    box-sizing: border-box;
-    margin: 0vh 0vw;
-    padding: 1vh 0vw;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2vw;
+    justify-content: left;
 }
 
-.header > nav > div > div {
+.header > nav > :first-child > div {
     box-sizing: border-box;
     margin: 0vh 0vw;
-    padding: 1vh 2vw;
+    padding: 1vh 0.5vw;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    gap: 3vw;
+}
+
+.header > nav > :last-child > img {
+    box-sizing: border-box;
+    margin: 0vh 0vw;
+    padding: 0vh 1vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .header > nav > div > div > a {
     box-sizing: border-box;
     margin: 0vh 0vw;
     padding: 1vh 2vw;
-    background-color: var(--color-blanco);
     border-radius: 10px;
     display: flex;
     justify-content: right;
-    gap: 0vw;
+    background-color: var(--color-blanco);
+    transition: all .3s ease-in-out;
+
+}
+
+.bottom_tienda:hover {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+
+.bottom_reserva:hover {
+    background-color: var(--color-rosa);
+    color: var(--color-negro);
+}
+
+.bottom_catalogo:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+}
+
+.bottom_inicio:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
 }
 
 
