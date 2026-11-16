@@ -251,10 +251,10 @@ p {
     box-sizing: border-box;
     margin: 0;
     padding: 1vh 1vw 1vh 1vw;
-    border: var(--color-negro) solid 1.5px;
+    border: var(--color-amarillo) solid 1.5px;
     border-radius: 20px;
-    background-color: var(--color-negro);
-    color: var(--color-blanco);
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
 }
 
 .productos_nuevos {
@@ -339,6 +339,12 @@ p {
     background-color: var(--color-negro);
     font-size: var(--tamaño-12px);
     color: var(--color-blanco);
+}
+
+.productos_opciones_texto_bottom > a:hover {
+    border: var(--color-rosa) solid 1.5px;
+    background-color: var(--color-rosa);
+    color: var(--color-negro);
 }
 
 
