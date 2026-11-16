@@ -73,6 +73,10 @@ a {
     font-family: "PP Neue Montreal Medium";
 }
 
+.txt-jp{
+  color: #717171;
+}
+
 /* a:hover {
     color: chartreuse;
 } */
@@ -234,7 +238,7 @@ p {
 }
 
 .productos_titulo {
-    margin: 5vh 0vw;
+    margin: 5vh 0vw 2vh 0vw;
     padding: 5vh 0vw 0vh 0vw;
     box-sizing: border-box;
     display: flex;
@@ -272,7 +276,7 @@ p {
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
-    gap: 3vw;
+    gap: 2vw;
 }
 
 .productos_opciones {
@@ -311,8 +315,6 @@ p {
     margin: 0;
     padding: 2vh 0vw 0vh 0vw;
 }
-
-/* .productos_opciones_texto_nombre */
 
 .productos_opciones_texto_autor {
     display: flex;
@@ -365,16 +367,22 @@ p {
 .explicacion {
     box-sizing: border-box;
     margin: 0;
-    padding: 40vh 10vw 0vh 10vw;
+    padding: 30vh 10vw 0vh 10vw;
     background-color: var(--color-blanco);
 }
 
+.explicacion > div {
+    border-bottom: var(--color-negro) solid 2px;
+    padding: 0vh 0vw 3vh 0vw;
+}
+
 .explicacion > div > :first-child {
-    padding: 0vh 0vw 2vh 0vw;
+    padding: 0vh 0vw 3vh 0vw;
     display: flex;
     justify-content: left;
     align-items: center;
     gap: 0.5vw;
+    border-bottom: var(--color-negro solid) 2px;
 }
 
 
@@ -386,7 +394,7 @@ p {
 .genero_del_mes {
     box-sizing: border-box;
     margin: 0;
-    padding: 15vh 10vw 6vh 10vw;
+    padding: 10vh 10vw 6vh 10vw;
     background-color: var(--color-blanco);
 }
 
@@ -501,11 +509,436 @@ genero_disco_texto
     gap: 14.3vw;
 }
 
+.filtros {
+    --f-fondo: #141414;
+    --f-texto: #fff;
+    --f-activo: #ee8bd9;            /* rosa de la opción activa */
+    --f-activo-texto: #141414;
+
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    width: 100%;
+    max-width: 792px;
+    margin-bottom: 1.5rem;
+    padding: .3rem;
+    margin-top: 24px;
+    background: var(--f-fondo);
+    border-radius: 999px;
+    overflow-x: auto;               /* en móvil se desliza en horizontal */
+    scrollbar-width: none;
+}
+
+.filtros::-webkit-scrollbar { display: none; }
+
+.filtros-genero,
+.filtros-estado {
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+}
+
 .filtro {
-    box-sizing: border-box;
+    flex: 1 1 auto;
+    border: 0;
+    background: transparent;
+    color: var(--f-texto);
+    font-family: "PP Neue Montreal Medium";
+    font-size: 14px;
+    padding: .6rem 1.5rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+}
+.filtro:hover { background: rgba(255, 255, 255, .12); }
+.filtro.is-active { background: var(--f-activo); color: var(--f-activo-texto); }
+.filtro:focus-visible { outline: 2px solid var(--f-activo); outline-offset: 2px; }
+
+/* Separador vertical entre género y estado */
+.filtros__sep {
+    flex: none;
+    width: 2px;
+    height: 1.5rem;
+    margin: 0 .4rem;
+    background: rgba(255, 255, 255, .6);
+}
+
+/* MODAL */
+.modal {
+    --modal-fondo: #f7f7f5;
+    --modal-tinta: #161616;
+    --modal-gris: #9a9a96;
+    --modal-borde: #cfcfca;
+    --modal-etiqueta: #c4472b;      /* color por defecto de la etiqueta central y del hover de Reservar */
+    --modal-vinilo: #111111;        /* color por defecto del disco */
+}
+
+/* Las tarjetas del catálogo abren el modal */
+.productos_opciones {
+  cursor: pointer;
+}
+
+body.modal-abierto {
+  overflow: hidden;
+}
+
+/* ---------- Capa y caja ---------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(12, 12, 12, 0.62);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__caja {
+  position: relative;
+  width: min(1020px, 100%);
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  background: var(--modal-fondo);
+  color: var(--modal-tinta);
+  border-radius: 32px;
+  font-family: var(--modal-sans);
+  transform: translateY(12px) scale(0.985);
+  transition: transform 0.25s ease;
+}
+
+.modal.is-open .modal__caja {
+  transform: none;
+}
+
+.modal__cerrar {
+  position: absolute;
+  top: 1.4rem;
+  right: 1.4rem;
+  z-index: 3;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #191919;
+  background: transparent;
+  color: #191919;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal__cerrar:hover {
+  background: #F892C5;
+  color: #191919;
+}
+
+/* ---------- Izquierda: portada + vinilo ---------- */
+.modal__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.3 / 1; /* la portada ocupa ~77 %, el vinilo asoma por la derecha */
+}
+
+.modal__portada {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  box-shadow: 6px 0 22px rgba(0, 0, 0, 0.35);
+}
+
+.modal__vinilo {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    z-index: 1;
+    height: 90%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    /* Colores por disco: --vinilo-color y --vinilo-etiqueta los pone modal.js desde el array */
+    background:
+        radial-gradient(circle closest-side, #000 0 4%, transparent 4.5%),                                   /* agujero */
+        radial-gradient(circle closest-side, var(--vinilo-etiqueta, var(--modal-etiqueta)) 0 50%, transparent 32.5%), /* etiqueta central */
+        repeating-radial-gradient(circle closest-side,                                                      /* surcos */
+            var(--vinilo-color, var(--modal-vinilo)) 0 2px,
+            color-mix(in srgb, var(--vinilo-color, var(--modal-vinilo)), #fff 14%) 2px 4px);
+    animation: modal-girar 3s linear infinite;
+}
+
+/* brillo para que se note el giro */
+.modal__vinilo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0 20%,
+    rgba(255, 255, 255, 0.13) 25%,
+    transparent 30% 70%,
+    rgba(255, 255, 255, 0.13) 75%,
+    transparent 80%
+  );
+}
+
+@keyframes modal-girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Derecha: contenido ---------- */
+.modal__contenido {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.modal__artista {
+  font-family: "PP Neue Montreal Mono Medium";
+  font-size: 14px;
+  letter-spacing: 2%;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.modal__titulo {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "PP Gatwick Jumbo Semibold";
+}
+.modal__titulo .txt-jp {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.modal .txt-jp {
+  color: var(--modal-gris);
+}
+
+.modal__meta {
     margin: 0;
-    padding: 5vh 2vw;
-    background-color: rgb(238, 255, 0);
+    font-family: "PP Neue Montreal Mono Medium";
+    font-size: 14px;
+    letter-spacing: 2%;
+    text-transform: uppercase;
+}
+
+.modal__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modal__chip {
+  border: 1px solid var(--modal-borde);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-family: "PP Neue Montreal Mono Medium";
+  font-size: 0.75rem;
+}
+
+.modal__texto {
+    margin: 0;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 2%;
+}
+
+.modal__texto .txt-jp {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+/* ---------- Reproductor ---------- */
+.modal__player {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--modal-borde);
+  border-radius: 12px;
+}
+
+.modal__player[hidden] {
+  display: none;
+}
+
+.modal__player-info {
+    width: 50%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.modal__player-label {
+  font-family: "PP Neue Montreal Mono Medium";
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--modal-gris);
+}
+
+.modal__player-label .txt-jp::before {
+  content: "· ";
+}
+
+.modal__player-track {
+  font-family: "PP Neue Montreal Mono Medium";
+  font-size: 12px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.modal__player-tiempo {
+    width: 45%;
+  font-family: "PP Neue Montreal Mono Medium";
+  font-size: 0.75rem;
+  color: var(--modal-gris);
+      text-align: right;
+}
+
+.modal__play {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--modal-tinta);
+  background: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+    background: #191919;
+}
+
+.modal__play svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff
+}
+
+.modal__play .ico-pause {
+  display: none;
+}
+
+.modal__play.is-playing .ico-play {
+  display: none;
+}
+
+.modal__play.is-playing .ico-pause {
+  display: block;
+}
+
+/* ---------- Pie: precio + reservar ---------- */
+.modal__pie {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.modal__precio {
+  font-family: "PP Neue Montreal Mono Medium";
+  font-size: 1rem;
+}
+
+.modal .btn-reservar {
+    display: inline-block;
+    background-color: #191919;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 21px;
+    border-radius: 12px;
+    font-family: "PP Neue Montreal Medium";
+    transition: all .3s ease-in-out;
+}
+
+.modal .btn-reservar:hover {
+  background: #FFC20E;
+  color: #191919;
+  
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal__vinilo {
+    animation: none;
+  }
+  .modal,
+  .modal__caja {
+    transition: none;
+  }
+}
+
+/* ---------- Móvil ---------- */
+@media (max-width: 760px) {
+    .section .content {
+        width: 90%;
+    }
+    .modal__caja {
+        grid-template-columns: 1fr;
+        border-radius: 24px;
+        padding-top: 4rem;
+        width: 90%;
+    }
+    .modal__contenido {
+        padding-right: 0;
+    }
+    .modal__cerrar {
+        top: 1rem;
+        right: 1rem;
+    }
+    .modal__titulo {
+        font-size: 24px;
+    }
+    .modal__artista,
+    .modal__meta {
+        font-size: 12px;
+    }
+    #inicio .content .flex-labels ul {
+        flex-wrap: wrap;
+        line-height: 1.8;
+    }
+    .filtros-genero, 
+    .filtros-estado {
+        gap: 1.20rem;
+    }
+    .footer_texto {
+        flex-direction: column;
+    }
+    .footer_img.content img {
+        width: 35%;
+    }
 }
 
 .catalogo {
