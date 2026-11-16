@@ -457,26 +457,33 @@ a {
     width: 100%;
     height: 34vw;
     background-color: var(--color-rosa);
-    /* display: grid; */
-    display: flex;
-    flex-direction: column;
-    overflow: hidden; 
+    display: grid;
 }
 
-.genero_disco > img {
-    grid-area: 1 / 1;
+.genero_disco_img {
+    margin: 0vh 0vw 0vh 0vw; 
+    padding: 0vh 0vw;
+    box-sizing: border-box;
+    z-index: 10;
+    width: 100%;
+    height: 42.1vh;
+}
+
+.genero_disco > .genero_disco_img > img {
     width: 100%;
     height: 100%;
-    opacity: 0%;
+    opacity: 0;
     object-fit: cover;
+    object-position: top;
 }
 
-.genero_disco:hover > img {
-    transition: 0.4s;
+.genero_disco:hover > .genero_disco_img > img {
+    transition: 0.6s;
     opacity: 100%;
+    grid-area: 1 / 1;
 }
 
-.genero_disco > div {
+.genero_disco > :last-child {
     box-sizing: border-box;
     margin: 0vh 0vw 0vh 0vw;
     padding: 3vh 1.5vw;
@@ -490,12 +497,49 @@ a {
     z-index: 10;
 }
 
-/* .genero_disco_portada {
-    display: flex;
-    justify-content: ;
-} */
+/* .genero_disco {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: 34vw;
+    background-color: var(--color-rosa);
+    display: grid;
+}
 
-genero_disco_texto
+.genero_disco_img {
+    margin: 0vh 0vw; 
+    padding: 1vh 0vw;
+    box-sizing: border-box;
+    z-index: 10;
+
+}
+
+.genero_disco > .genero_disco_img > img {
+    width: 100%;
+    height: 100%;
+    opacity: 0%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.genero_disco:hover > .genero_disco_img > img {
+    transition: 0.6s;
+    opacity: 100%;
+    grid-area: 1 / 1;
+}
+
+.genero_disco > :last-child {
+    box-sizing: border-box;
+    margin: 0vh 0vw 0vh 0vw;
+    padding: 3vh 1.5vw;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    grid-area: 1 / 1;
+    position: relative;  
+    z-index: 10;
+} */
 
 
 
@@ -1052,6 +1096,5 @@ body.modal-abierto {
     padding: 2vh 0vw 2vh 0vw;
     color: var(--color-blanco);
     font-size: var(--tamaño-12px);
-        font-family: "PP Neue Montreal Medium";
-
+    font-family: "PP Neue Montreal Mono Medium";
 }
