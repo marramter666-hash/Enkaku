@@ -82,10 +82,10 @@ a {
     color: chartreuse;
 } */
 
-p {
+/* p {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 400;
-}
+} */
 
 /* TEXTO */
 .enunciado_español {
@@ -457,7 +457,10 @@ p {
     width: 100%;
     height: 34vw;
     background-color: var(--color-rosa);
-    display: grid;
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
 }
 
 .genero_disco > img {
@@ -1041,8 +1044,6 @@ body.modal-abierto {
     display: flex;
     justify-content: right;
     border-top: var(--color-blanco) solid 2px;
-    font-size: var(--tamaño-12px);
-    color: var(--color-blanco);
 }
 
 .footer_info > p {
@@ -1050,4 +1051,7 @@ body.modal-abierto {
     margin: 0;
     padding: 2vh 0vw 2vh 0vw;
     color: var(--color-blanco);
+    font-size: var(--tamaño-12px);
+        font-family: "PP Neue Montreal Medium";
+
 }
