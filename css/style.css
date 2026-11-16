@@ -279,7 +279,7 @@ h2 {
 }
 
 .bottom_inicio:hover {
-    background-color: var(--color-amarillo);
+    background-color: var(--color-rosa);
     color: var(--color-negro);
 }
 
@@ -292,7 +292,7 @@ h2 {
 .explicacion {
     box-sizing: border-box;
     margin: 0;
-    padding: 20vh 10vw 0vh 10vw;
+    padding: 0vh 5vw 0vh 5vw;
     background-color: var(--color-blanco);
 }
 
@@ -319,7 +319,7 @@ h2 {
 .genero_del_mes {
     box-sizing: border-box;
     margin: 0;
-    padding: 15vh 10vw 6vh 10vw;
+    padding: 15vh 5vw 6vh 5vw;
     background-color: var(--color-blanco);
 }
 
@@ -438,6 +438,18 @@ h2 {
 
 .footer_texto_texto > div {
     padding: 0vh 0vw 2vh 0vw;
+}
+
+.bottom_azul:hover {
+    color: var(--color-azul);
+}
+
+.bottom_rosa:hover {
+    color: var(--color-rosa);
+}
+
+.bottom_amarillo:hover {
+    color: var(--color-amarillo);
 }
 
 .footer_img {
