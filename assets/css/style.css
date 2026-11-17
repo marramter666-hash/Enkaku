@@ -117,7 +117,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2vw;
+    gap: 0vw;
 }
 
 .header > nav > div > div {
@@ -128,7 +128,7 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3vw;
+    gap: 0vw;
 }
 
 .header > nav > div > div > a {
