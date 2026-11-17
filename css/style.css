@@ -79,12 +79,12 @@ h2 {
    font-size: 24px;
    letter-spacing: -1%;
 }
-.section .content {
+/* .section .content {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 48px 0;
-}
+} */
 
 /* TEXTO */
 .enunciado_español {
@@ -99,7 +99,7 @@ h2 {
 
 
 
-.disco_nombre {
+/* .disco_nombre {
     font-size: var(--tamaño-12px);
     font-family: "PP Neue Montreal Mono Medium";
 }
@@ -134,12 +134,12 @@ h2 {
     font-family: "PP Neue Montreal Mono Medium";
     padding: 0vh 0vw 1.5vh 0vw;
     color: var(--color-blanco);
-}
+} */
 
 
 
 
-.disco_precio {
+/* .disco_precio {
     font-size: var(--tamaño-14px);
     font-family: "PP Neue Montreal Mono Medium";
 }
@@ -152,7 +152,7 @@ h2 {
 .disco_etiquetas {
     font-size: var(--tamaño-12px);
     font-family: "PP Neue Montreal Medium";
-}
+} */
 
 
 .parrafo {
@@ -310,7 +310,7 @@ h2 {
 
 
 /* SECTION GENERO DEL MES */
-.genero_del_mes {
+/* .genero_del_mes {
     box-sizing: border-box;
     margin: 0;
     padding: 15vh 5vw 6vh 5vw;
@@ -383,7 +383,7 @@ h2 {
     grid-area: 1 / 1;
     position: relative;  
     z-index: 10;
-}
+} */
 
 
 
