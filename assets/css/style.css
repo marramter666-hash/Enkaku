@@ -1332,107 +1332,6 @@ body.modal-abierto {
     font-size: var(--tamaño-12px);
 }
 
-@media (max-width: 600px) {
-    .slideshow__pantalla { --visibles: 1.2; }
-}
-/* ---------- Móvil ---------- */
-@media (max-width: 760px) {
-    .section .content {
-        width: 90%;
-    }
-    .modal__caja {
-        grid-template-columns: 1fr;
-        border-radius: 24px;
-        padding-top: 4rem;
-        width: 90%;
-    }
-    .modal__contenido {
-        padding-right: 0;
-    }
-    .modal__cerrar {
-        top: 1rem;
-        right: 1rem;
-    }
-    .modal__titulo {
-        font-size: 24px;
-    }
-    .modal__artista,
-    .modal__meta {
-        font-size: 12px;
-    }
-    #inicio .content .flex-labels ul {
-        flex-wrap: wrap;
-        line-height: 1.8;
-    }
-    .filtros-genero, 
-    .filtros-estado {
-        gap: 1.20rem;
-    }
-    .footer_texto {
-        flex-direction: column;
-    }
-    .footer_img.content img {
-        width: 35%;
-    }
-    #inicio .title-hero {
-        padding: 48px 0;
-        flex-direction: column;
-    }
-
-    #inicio .title-hero .title-ppal, 
-    #inicio .title-hero .icon-hero {
-        width: 95%;
-        margin: 0 auto;
-    }
-
-    #inicio .title-hero .icon-hero {
-        text-align: right;
-        margin-top: 18px;
-    }
-
-    #inicio .title-hero .title-ppal h1 {
-        font-size: 36px;
-        min-height: 4em;
-    }
-    .productos_titulo {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-direction: column;
-        align-content: flex-start;
-        gap: 24px;
-    }
-    .genero_fila {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-    .genero_del_mes {
-      padding: 96px 0;
-    }
-
-    .genero_del_mes .content {
-      margin: 0 auto;
-    }
-
-    .genero_disco {
-      width: 100%;
-      background: #000;
-    }
-
-    .slideshow__pantalla {
-      width: 100%;
-      height: 384px;
-    }
-
-    .slide {
-      margin-right: 0px;
-    }
-    .genero_disco .genero_disco_texto {
-      padding: 24px;
-  }
-}
-
 
 
 
@@ -1748,4 +1647,179 @@ body.modal-abierto {
 .factura_bottom {
     font-family: "PP Neue Montreal Medium";
     font-size: var(--tamaño-18px);
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+    /* SECCION ENCUESTA */
+    .formulario {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 8vw;
+
+    }
+
+    .bottom_seccion {
+        margin: 2vh 0vw 0vh 0vw;
+        padding: 0vh 0vw 0vh 0vw;
+    }
+
+    .bottom_seccion_medio {
+        margin: 2vh 0vw 1vh 0vw;
+    }
+
+    .contenedores {
+        box-sizing: border-box;
+        margin: 1vh 0vw 1vh 0vw;
+        padding: 3vh 0vw 0vh 0vw;
+    }
+
+
+    .formulario_resumen {
+        box-sizing: border-box;
+        margin: 0vh 0vw 2vh 0vw;
+        padding: 1vh 3vw;
+    }
+
+    .factura_disco {
+        padding: 1vh 0vw 1vh 0vw;
+    }
+
+    .factura_disco > img {
+        padding: 0vh 3vw 0vh 0vw;
+        width: auto;
+        height: 20vh;
+    }
+
+
+
+
+    /* FOOTER */
+    .footer {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 10vh 3vw 0vh 3vw;
+    }
+
+    .footer_texto {
+        gap: 20px;
+    }
+
+   
+    .footer_texto_titulo {
+        font-family: "PP Neue Montreal Mono Medium";
+        box-sizing: border-box;
+        margin: 0;
+        margin-bottom: 4px;
+        padding: 0vh 0vw 3vh 0vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .slideshow__pantalla { --visibles: 1.2; }
+}
+/* ---------- Móvil ---------- */
+@media (max-width: 760px) {
+    .section .content {
+        width: 90%;
+    }
+    .modal__caja {
+        grid-template-columns: 1fr;
+        border-radius: 24px;
+        padding-top: 4rem;
+        width: 90%;
+    }
+    .modal__contenido {
+        padding-right: 0;
+    }
+    .modal__cerrar {
+        top: 1rem;
+        right: 1rem;
+    }
+    .modal__titulo {
+        font-size: 24px;
+    }
+    .modal__artista,
+    .modal__meta {
+        font-size: 12px;
+    }
+    #inicio .content .flex-labels ul {
+        flex-wrap: wrap;
+        line-height: 1.8;
+    }
+    .filtros-genero, 
+    .filtros-estado {
+        gap: 1.20rem;
+    }
+    .footer_texto {
+        flex-direction: column;
+    }
+    .footer_img.content img {
+        width: 35%;
+    }
+    #inicio .title-hero {
+        padding: 48px 0;
+        flex-direction: column;
+    }
+
+    #inicio .title-hero .title-ppal, 
+    #inicio .title-hero .icon-hero {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    #inicio .title-hero .icon-hero {
+        text-align: right;
+        margin-top: 18px;
+    }
+
+    #inicio .title-hero .title-ppal h1 {
+        font-size: 36px;
+        min-height: 4em;
+    }
+    .productos_titulo {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        align-content: flex-start;
+        gap: 24px;
+    }
+    .genero_fila {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .genero_del_mes {
+      padding: 96px 0;
+    }
+
+    .genero_del_mes .content {
+      margin: 0 auto;
+    }
+
+    .genero_disco {
+      width: 100%;
+      background: #000;
+    }
+
+    .slideshow__pantalla {
+      width: 100%;
+      height: 384px;
+    }
+
+    .slide {
+      margin-right: 0px;
+    }
+    .genero_disco .genero_disco_texto {
+      padding: 24px;
+  }
 }
