@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>| Enkaku &copy;</title>
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -23,7 +23,7 @@
                 <div>
                     <a class="bottom_catalogo" href="/catalogo/index.html">Catálogo</a>
                 </div>
-            </div>
+            </div> 
             <div>
                 <img src="assets/img/KAKU1.png" alt="">
                 <div>
@@ -48,14 +48,26 @@
                     </li>
                 </ul>
             </div>
+            <div class="title-hero">
+                <div class="title-ppal">
+                    <h1 aria-label="Bienvenidos a la casa de la salsa en Tokio">
+                        <span id="titulo-typed">Bienvenidos a la casa de la salsa en Tokio</span>
+                    </h1>
+                </div>
+                <div class="icon-hero">
+                    <picture >
+                        <source media="(max-width: 768px)" srcset="assets/img/enkaku-hiro.svg">
+                        <img id="draggable" src="assets/img/enkaku-hiro-text.svg" alt="Enkaku">
+                    </picture>
+                </div>
+            </div>
         </div>
     </section>
-
     <section class="productos section catalogo">
         <div class="content">
             <div class="productos_titulo">
                 <div class="titulo-seccion">
-                    <h1 class="txt-es" data-jp="· 新入荷">Recién llegados <span class="txt-jp"></span></h1>
+                    <h2 class="txt-es" data-jp="· 新入荷">Recién llegados <span class="txt-jp"></span></h2>
                 </div>
                 <div class="btn-seccion">
                     <a href="/catalogo/" class="btn-catalogo">Ver catálogo completo</a>
@@ -81,7 +93,7 @@
                             <p class="disco_etiquetas">Muy bueno (VG+)</p>
                         </div>
                         <div class="productos_opciones_texto_bottom">
-                            <a href="" class="btn-reservar">Reservar</a>
+                            <a href="formulario.html" class="btn-reservar">Reservar</a>
                         </div>
                     </div>
                 </div>
@@ -104,7 +116,7 @@
                             <p class="disco_etiquetas">Como nuevo (M / NM)</p>
                         </div>
                         <div class="productos_opciones_texto_bottom">
-                            <a href="" class="btn-reservar">Reservar</a>
+                            <a href="formulario.html" class="btn-reservar">Reservar</a>
                         </div>
                     </div>
                 </div>
@@ -126,7 +138,7 @@
                             <p class="disco_etiquetas">Nuevo</p>
                         </div>
                         <div class="productos_opciones_texto_bottom">
-                            <a href="" class="btn-reservar">Reservar</a>
+                            <a href="formulario.html" class="btn-reservar">Reservar</a>
                         </div>
                     </div>
                 </div>
@@ -134,8 +146,8 @@
         </div>
     </section>
 
-    <section class="explicacion">
-        <div>
+    <section class="explicacion section">
+        <div class="content">
             <div>
                 <p class="enunciado_español">LA TIENDA ·</p>
                 <p class="enunciado_japones">お店について</p>
@@ -180,112 +192,117 @@
 
                     <div class="modal__pie">
                         <span class="modal__precio" id="modal-precio"></span>
-                        <a href="../reservar/" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar</a>
+                        <a href="formulario.html" target="_blank" rel="noopener noreferrer" class="btn-reservar">Reservar</a>
                     </div>
                 </div>
             </div>
         </div>
 
     <section class="genero_del_mes section">
-        <div class="genero_titulo">
-            <div>
-                <p class="enunciado_español">GÉNERO DEL MES ·</p>
-                <p class="enunciado_japones">今月のジャンル</p>
-            </div>
-            <div>
-                <p class="enunciado_español">01 / 06</p>
-            </div>
-        </div>
-        <div class="genero_fila">
-            <div class="genero_disco">
-                <div class="genero_disco_portada">
-                    <p class="disco_autor_titulo">BOOGALOO</p>
-                    <p class="disco_japones_genero">ブーガルー</p>
-                    <p class="disco_nombre_titulo">NUEVA YORK · 1966–1969</p>
+        <div class="content">
+            <div class="genero_titulo">
+                <div>
+                    <p class="enunciado_español">GÉNERO DEL MES ·</p>
+                    <p class="enunciado_japones">今月のジャンル</p>
                 </div>
             </div>
-            <div class="genero_disco">
-                <div class="genero_disco_img">
-                    <img src="assents/img/portada_i_like_that.jpg" alt=""> 
+            <div class="genero_fila">
+                <div class="genero_disco">
+                    <div class="genero_disco_portada verde">
+                        <p class="disco_autor_titulo">BOOGALOO</p>
+                        <p class="disco_japones_genero">ブーガルー</p>
+                        <p class="disco_nombre_titulo">NUEVA YORK · 1966–1969</p>
+                    </div>
                 </div>
-                <div class="genero_disco_texto">
-                    <p class="disco_nombre_genero">PETE RODRIGUEZ</p>
-                    <div>
-                        <div class="productos_opciones_texto_autor">
-                            <p class="disco_autor">I Like It Like That</p>
-                            <p class="disco_precio">¥8,800</p>
+                <div class="slideshow__pantalla">
+                    <div class="genero_disco slide slide-1">
+                        <div class="genero_disco_img">
+                            <img src="assets/img/portada_i_like_that.jpg" alt="I Like It Like That"> 
                         </div>
-                        <p class="disco_japones">アイ・ライク・イット・ライク・ザット LP </p>
-                    </div>
-                    <p class="disco_nombre_genero">1967 · ALEGRE RECORDS</p>
-                    <div class="productos_opciones_texto_etiquetas">
-                        <p class="disco_etiquetas">Segunda mano</p>
-                        <p class="disco_etiquetas">Bueno (VG)</p>
-                    </div>
-                    <div class="productos_opciones_texto_bottom">
-                        <a href="">Reservar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="genero_disco">
-                <div class="genero_disco_img">
-                    <img src="assents/img/portada_i_like_that.jpg" alt=""> 
-                </div>
-                <div class="genero_disco_texto">
-                    <p class="disco_nombre_genero">PETE RODRIGUEZ</p>
-                    <div>
-                        <div class="productos_opciones_texto_autor">
-                            <p class="disco_autor">I Like It Like That</p>
-                            <p class="disco_precio">¥8,800</p>
+                        <div class="genero_disco_texto">
+                            <p class="disco_nombre_genero">PETE RODRIGUEZ</p>
+                            <div>
+                                <div class="productos_opciones_texto_autor">
+                                    <p class="disco_autor">I Like It Like That</p>
+                                    <p class="disco_precio">¥8,800</p>
+                                </div>
+                                <p class="disco_japones">アイ・ライク・イット・ライク・ザット LP </p>
+                            </div>
+                            <p class="disco_nombre_genero">1967 · ALEGRE RECORDS</p>
+                            <div class="productos_opciones_texto_etiquetas">
+                                <p class="disco_etiquetas">Segunda mano</p>
+                                <p class="disco_etiquetas">Bueno (VG)</p>
+                            </div>
+                            <div class="productos_opciones_texto_bottom">
+                                <a href="formulario.html" target="_blank" rel="noopener noreferrer">Reservar</a>
+                            </div>
                         </div>
-                        <p class="disco_japones">アイ・ライク・イット・ライク・ザット LP </p>
                     </div>
-                    <p class="disco_nombre_genero">1967 · ALEGRE RECORDS</p>
-                    <div class="productos_opciones_texto_etiquetas">
-                        <p class="disco_etiquetas">Segunda mano</p>
-                        <p class="disco_etiquetas">Bueno (VG)</p>
-                    </div>
-                    <div class="productos_opciones_texto_bottom">
-                        <a href="">Reservar</a>
-                    </div>
-                </div>
-            </div>
-            <div class="genero_disco">
-                <div class="genero_disco_portada">
-                    <p class="disco_autor_titulo">BOOGALOO</p>
-                    <p class="disco_japones_genero">ブーガルー</p>
-                    <p class="disco_nombre_titulo">NUEVA YORK · 1966–1969</p>
-                </div>
-            </div>
-            <div class="genero_disco">
-                <div class="genero_disco_img">
-                    <img src="assents/img/portada_i_like_that.jpg" alt=""> 
-                </div>
-                <div class="genero_disco_texto">
-                    <p class="disco_nombre_genero">PETE RODRIGUEZ</p>
-                    <div>
-                        <div class="productos_opciones_texto_autor">
-                            <p class="disco_autor">I Like It Like That</p>
-                            <p class="disco_precio">¥8,800</p>
+                    <div class="genero_disco slide slide-2">
+                        <div class="genero_disco_img">
+                            <img src="assets/img/portada_gypsy_woman.jpg" alt="Gypsy Woman"> 
                         </div>
-                        <p class="disco_japones">アイ・ライク・イット・ライク・ザット LP </p>
+                        <div class="genero_disco_texto">
+                            <p class="disco_nombre_genero">JOE BATAAN</p>
+                            <div>
+                                <div class="productos_opciones_texto_autor">
+                                    <p class="disco_autor">Gypsy Woman</p>
+                                    <p class="disco_precio">¥4,800</p>
+                                </div>
+                                <p class="disco_japones">ジプシー・ウーマン 180g重量盤 LP</p>
+                            </div>
+                            <p class="disco_nombre_genero">1967 · FANIA RECORDS</p>
+                            <div class="productos_opciones_texto_etiquetas">
+                                <p class="disco_etiquetas">Nuevo</p>
+                            </div>
+                            <div class="productos_opciones_texto_bottom">
+                                <a href="formulario.html" target="_blank" rel="noopener noreferrer">Reservar</a>
+                            </div>
+                        </div>
                     </div>
-                    <p class="disco_nombre_genero">1967 · ALEGRE RECORDS</p>
-                    <div class="productos_opciones_texto_etiquetas">
-                        <p class="disco_etiquetas">Segunda mano</p>
-                        <p class="disco_etiquetas">Bueno (VG)</p>
+                    <div class="genero_disco slide slide-3">
+                        <div class="genero_disco_portada">
+                            <p class="disco_autor_titulo">JOE BATAAN</p>
+                            <p class="disco_japones_genero">ジョー・バターン</p>
+                            <p class="disco_nombre_titulo">SPANISH HARLEM · EL REY DEL LATIN SOUL</p>
+                            <div class="disco-descipcion">
+                                De ascendencia filipina y afroamericana, Joe Bataan creció en el Spanish Harlem de Nueva York, donde se cruzaban los ritmos latinos y el soul. Unió ambos mundos con letras en inglés y en español, y la industria lo bautizó como el Rey del Latin Soul. フィリピン系の血を引く、ラテン・ソウルの王。
+                            </div>
+                        </div>
                     </div>
-                    <div class="productos_opciones_texto_bottom">
-                        <a href="">Reservar</a>
+                    <div class="genero_disco slide slide-4">
+                        <div class="genero_disco_img">
+                            <img src="assets/img/portada_acid.jpg" alt="Acid"> 
+                        </div>
+                        <div class="genero_disco_texto">
+                            <p class="disco_nombre_genero">RAY BARRETTO</p>
+                            <div>
+                                <div class="productos_opciones_texto_autor">
+                                    <p class="disco_autor">Acid</p>
+                                    <p class="disco_precio">¥8,800</p>
+                                </div>
+                                <p class="disco_japones">アシッド 180g重量盤 LP</p>
+                            </div>
+                            <p class="disco_nombre_genero">1968 · FANIA RECORDS</p>
+                            <div class="productos_opciones_texto_etiquetas">
+                                <p class="disco_etiquetas">Nuevo</p>
+                            </div>
+                            <div class="productos_opciones_texto_bottom">
+                                <a href="formulario.html" target="_blank" rel="noopener noreferrer">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="genero_disco slide circulo">
+                        <a href="/catalogo/">
+                            <div class="genero_disco_portada">
+                                <p class="disco_autor_titulo">SIGUE BUSCANDO</p>
+                                <p class="disco_japones_genero">もっと掘る</p>
+                                <p class="disco_nombre_titulo">VER CATÁLOGO COMPLETO <img src="assets/img/arrow_forward.svg" alt=""></p>
+                            </div>
+                        </a>
                     </div>
                 </div>
-            </div>
-            <div class="genero_disco">
-                <div class="genero_disco_portada">
-                    <p class="disco_autor_titulo">BOOGALOO</p>
-                    <p class="disco_japones_genero">ブーガルー</p>
-                    <p class="disco_nombre_titulo">NUEVA YORK · 1966–1969</p>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -370,7 +387,15 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/modal.js"></script>
+    <script src="assets/js/hero_type.js"></script>
+    <script>
+    $( function() {
+        $( "#draggable" ).draggable();
+    });
+    </script>
 </body>
 </html>
