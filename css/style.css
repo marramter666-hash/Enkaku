@@ -40,10 +40,6 @@
     --color-rosa: #F892C5;
     --color-amarillo: #FFC20E;
 
-    /* FUENTES
-    --fuente-principal: ;
-    --fuente-segundo: ;
-    --fuente-tercero: ; */
 
     /* TAMAÑO TEXTO */
     --tamaño-08px: 0.5rem;
@@ -72,6 +68,7 @@ a {
     color: var(--color-negro);
     font-family: "PP Neue Montreal Medium";
 }
+
 .txt-jp{
   color: #717171;
 }
@@ -194,9 +191,6 @@ h2 {
     font-size: var(--tamaño-14px);
     color: var(--color-blanco);
     font-family: "Noto Sans JP";
-}
-.footer_info.content {
-    padding: 0;
 }
 
 
@@ -476,6 +470,82 @@ h2 {
 }
 
 
+
+
+
+/* SECCION ENCUESTA */
+.encuesta {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10vh 5vw 5vh 5vw;
+    background-color: var(--color-blanco);
+}
+
+.formulario_secciones > :nth-child(2) >  :nth-child(2) {
+    padding: 0vh 0vw 6vh 0vw;
+    border-bottom: var(--color-negro) solid 1px;
+}
+
+.seccion {
+    box-sizing: border-box;
+    margin: 4vh 0vw 4vh 0vw;
+    padding: 3vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+}
+
+.titulo_seccion {
+    margin: 0vh 0vw 5vh 0vw;
+    padding: 1vh 0vw 4vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
+    border-bottom: var(--color-negro) solid 1px;
+}
+
+.info_seccion {
+    margin: 0vh 0vw 3vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.bottom_seccion {
+    margin: 5vh 0vw 0vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 2vw;
+}
+
+.bottom_seccion_medio {
+    margin: 5vh 0vw 0vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+}
+
+.contenedores {
+    box-sizing: border-box;
+    margin: 5vh 0vw 5vh 0vw;
+    padding: 5vh 41vw 0vh 0vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 50px;
+}
+
+.etiqueta_seccion {
+    box-sizing: border-box;
+    margin: 0vh 0vw 0vh 0vw;
+    padding: 2vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 50px;
+}
 
 
 
