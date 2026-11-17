@@ -477,8 +477,14 @@ h2 {
 .encuesta {
     box-sizing: border-box;
     margin: 0;
-    padding: 10vh 5vw 5vh 5vw;
+    padding: 10vh 10vw 5vh 10vw;
     background-color: var(--color-blanco);
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    gap: 10vw;
 }
 
 .formulario_secciones > :nth-child(2) >  :nth-child(2) {
@@ -534,7 +540,7 @@ h2 {
 .contenedores {
     box-sizing: border-box;
     margin: 5vh 0vw 5vh 0vw;
-    padding: 5vh 41vw 0vh 0vw;
+    padding: 5vh 0vw 0vh 0vw;
     border: var(--color-negro) solid 1px;
     border-radius: 50px;
 }
@@ -545,6 +551,18 @@ h2 {
     padding: 2vh 2vw;
     border: var(--color-negro) solid 1px;
     border-radius: 50px;
+}
+
+.formulario_resumen {
+    box-sizing: border-box;
+    margin: 4vh 0vw 4vh 0vw;
+    padding: 3vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+    position: sticky;
+    top: 15vh;
+    z-index: 100;
+    align-self: flex-start
 }
 
 
