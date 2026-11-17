@@ -539,7 +539,7 @@ h2 {
 
 .contenedores {
     box-sizing: border-box;
-    margin: 5vh 0vw 5vh 0vw;
+    margin: 3vh 0vw 3vh 0vw;
     padding: 5vh 0vw 0vh 0vw;
     border: var(--color-negro) solid 1px;
     border-radius: 50px;
@@ -548,7 +548,7 @@ h2 {
 .etiqueta_seccion {
     box-sizing: border-box;
     margin: 0vh 0vw 0vh 0vw;
-    padding: 2vh 2vw;
+    padding: 1vh 2vw;
     border: var(--color-negro) solid 1px;
     border-radius: 50px;
 }
@@ -573,13 +573,51 @@ h2 {
 
 .modal__reserva_A {
     box-sizing: border-box;
-    margin: 0vh 0vw 4vh 0vw;
-    padding: 4vh 0vw 4vh 0vw;
+    margin: 0vh 31vw 10vh 31vw;
+    padding: 15vh 0vw 5vh 0vw;
     background-color: #FFC20E;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
-    height: 50%;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+}
+
+.modal__reserva_A > div {
+    background-color: #FFC20E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserva_img {
+    width: 9vw;
+    height: auto;
+    padding: 0vh 0vw 5vh 0vw;
+}
+
+.reserva_texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reserva_numero {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+.reserva_seguir {
+    padding: 2vh 2vw 2vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+    background-color: var(--color-blanco);
+}
+
+.reserva_volver {
+    border-bottom: var(--color-negro) solid 1.5px;
+
 }
