@@ -88,11 +88,10 @@ h2 {
 .header > nav {
     box-sizing: border-box;
     margin: 0;
-    padding: 1vh 2vw;
+    padding: 1vh 1vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 3vw;
     background-color: var(--color-negro);
     border-radius: 15px;
     position: fixed;
@@ -104,46 +103,128 @@ h2 {
     z-index: 1000;
 }
 
-.header > nav > img {
-    height: 4vh;
+.header > nav > div > img {
+    height: 30px;
     width: auto;
 }
 
 .header > nav > div {
-    box-sizing: border-box;
-    margin: 0vh 0vw;
-    padding: 1vh 0vw;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0vw;
+    justify-content: left;
 }
 
-.header > nav > div > div {
+.header > nav > :first-child > div {
     box-sizing: border-box;
     margin: 0vh 0vw;
-    padding: 1vh 2vw;
+    padding: 1vh 0.5vw;
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
-    gap: 0vw;
+}
+
+.header > nav > :last-child > img {
+    box-sizing: border-box;
+    margin: 0vh 0vw;
+    padding: 0vh 1vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
 }
 
 .header > nav > div > div > a {
     box-sizing: border-box;
     margin: 0vh 0vw;
     padding: 1vh 2vw;
-    background-color: var(--color-blanco);
     border-radius: 10px;
     display: flex;
     justify-content: right;
-    gap: 0vw;
+    background-color: var(--color-blanco);
+    transition: all .3s ease-in-out;
+
+}
+
+.bottom_tienda:hover {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+
+.bottom_reserva:hover {
+    background-color: var(--color-rosa);
+    color: var(--color-negro);
+}
+
+.bottom_catalogo:hover {
+    background-color: var(--color-amarillo);
+    color: var(--color-negro);
+}
+
+.bottom_inicio:hover {
+    background-color: var(--color-rosa);
+    color: var(--color-negro);
 }
 
 
 /* TEXTO */
+.enunciado_español {
+    font-size: var(--tamaño-24px);
+    font-family: "PP Neue Montreal Mono Medium";
+}
+
+.enunciado_japones {
+    font-size: var(--tamaño-20px);
+    font-family: "Noto Sans JP";
+}
+
+
+
+.parrafo {
+    font-size: var(--tamaño-36px);
+    font-family: "PP Neue Montreal Medium";
+}
+
+
+.parrafo {
+    font-size: var(--tamaño-36px);
+}
+
+
+.footer_titulo_español {
+    font-size: var(--tamaño-20px);
+    color: var(--color-blanco);
+    font-family: "PP Neue Montreal Mono Medium";
+}
+
+.footer_titulo_japones {
+    font-size: var(--tamaño-16px);
+    color: var(--color-blanco);
+    font-family: "Noto Sans JP";
+
+}
+
+.footer_texto_espanol {
+    font-family: "PP Neue Montreal Medium";
+    font-size: var(--tamaño-14px);
+    color: var(--color-blanco);
+    font-family: "PP Neue Montreal Medium";
+}
+
+.footer_texto_japones {
+    font-family: "Noto Sans JP";
+    font-size: var(--tamaño-14px);
+    color: var(--color-blanco);
+    font-family: "Noto Sans JP";
+}
+
+
+
+
+
+
+
+
+
 .enunciado_español {
     font-size: var(--tamaño-24px);
     font-family: "PP Neue Montreal Mono Medium";
@@ -935,7 +1016,7 @@ body.modal-abierto {
 .explicacion {
     box-sizing: border-box;
     margin: 0;
-    padding: 0vh 10vw 0vh 10vw;
+    padding: 0vh 5vw 0vh 5vw;
     background-color: var(--color-blanco);
 }
 
@@ -1216,6 +1297,18 @@ body.modal-abierto {
     padding: 0vh 0vw 2vh 0vw;
 }
 
+.bottom_azul:hover {
+    color: var(--color-azul);
+}
+
+.bottom_rosa:hover {
+    color: var(--color-rosa);
+}
+
+.bottom_amarillo:hover {
+    color: var(--color-amarillo);
+}
+
 .footer_img {
     box-sizing: border-box;
     margin: 0vh 0vw 4vh 0vw;
@@ -1237,35 +1330,6 @@ body.modal-abierto {
     margin: 0;
     padding: 2vh 0vw 2vh 0vw;
     font-size: var(--tamaño-12px);
-}
-.footer_titulo_español {
-    font-size: var(--tamaño-20px);
-    color: var(--color-blanco);
-    font-family: "PP Neue Montreal Mono Medium";
-}
-
-.footer_titulo_japones {
-    font-size: var(--tamaño-16px);
-    color: var(--color-blanco);
-    font-family: "Noto Sans JP";
-
-}
-
-.footer_texto_espanol {
-    font-family: "PP Neue Montreal Medium";
-    font-size: var(--tamaño-14px);
-    color: var(--color-blanco);
-    font-family: "PP Neue Montreal Medium";
-}
-
-.footer_texto_japones {
-    font-family: "Noto Sans JP";
-    font-size: var(--tamaño-14px);
-    color: var(--color-blanco);
-    font-family: "Noto Sans JP";
-}
-.footer_info.content {
-    padding: 0;
 }
 
 @media (max-width: 600px) {
@@ -1367,4 +1431,280 @@ body.modal-abierto {
     .genero_disco .genero_disco_texto {
       padding: 24px;
   }
+}
+
+
+
+
+
+
+
+
+
+/* SECCION ENCUESTA */
+.encuesta {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10vh 10vw 5vh 10vw;
+    background-color: var(--color-blanco);
+}
+
+.formulario {
+    display: flex;
+    justify-content: space-between;
+    gap: 8vw;
+}
+
+.formulario_secciones > :nth-child(2) >  :nth-child(2) {
+    padding: 0vh 0vw 6vh 0vw;
+    border-bottom: var(--color-negro) solid 1px;
+}
+
+.seccion {
+    box-sizing: border-box;
+    margin: 4vh 0vw 4vh 0vw;
+    padding: 3vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+}
+
+.seccion > :first-child {
+    margin: 0vh 0vw 5vh 0vw;
+    padding: 1vh 0vw 4vh 0vw;
+    gap: 0.5vw;
+    border-bottom: var(--color-negro) solid 1px;
+}
+
+.titulo_seccion {
+    margin: 0vh 0vw 2vh 0vw;
+    padding: 1vh 0vw 0vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
+    font-family: "PP Neue Montreal Mono Medium";
+}
+
+.info_seccion {
+    margin: 0vh 0vw 3vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    gap: 0.5vw;
+}
+
+.bottom_seccion {
+    margin: 5vh 0vw 0vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    gap: 2vw;
+}
+
+.bottom_seccion_medio {
+    margin: 5vh 0vw 3vh 0vw;
+    padding: 0vh 0vw 0vh 0vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2vw;
+}
+
+.contenedores {
+    box-sizing: border-box;
+    margin: 3vh 0vw 3vh 0vw;
+    padding: 5vh 0vw 0vh 0vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 50px;
+}
+
+.etiqueta_seccion {
+    box-sizing: border-box;
+    margin: 0vh 0vw 0vh 0vw;
+    padding: 1vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 50px;
+}
+
+.formulario_resumen {
+    box-sizing: border-box;
+    margin: 4vh 0vw 4vh 0vw;
+    padding: 3vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+    position: sticky;
+    top: 15vh;
+    z-index: 100;
+    align-self: flex-start;
+    background-color: var(--color-negro);
+}
+
+.formulario_resumen p {
+    color: var(--color-blanco);
+}
+
+.calculos > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 0vw 0vh 0vw;
+    font-family: "PP Neue Montreal Mono Medium";
+    font-size: var(--tamaño-16px);
+}
+
+.calculos > :nth-child(2) {
+    padding: 1vh 0vw 2vh 0vw;
+    border-bottom: var(--color-blanco) solid 1px;
+}
+
+.calculos > :last-child {
+    padding: 3vh 0vw 2vh 0vw;
+    font-family: "PP Neue Montreal Mono Medium";
+    font-size: var(--tamaño-24px);
+}
+
+.negro {
+    border: var(--color-blanco) solid 1px;
+}
+
+.blanco {
+    padding: 0vh 0vw 3vh 0vw;
+    border-bottom: var(--color-blanco) solid 1px;
+}
+
+
+
+
+
+
+
+
+
+.factura_disco {
+    padding: 3vh 0vw 2vh 0vw;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.factura_disco > img {
+    width: 8vw;
+    height: auto;
+}
+
+.factura_info > :first-child {
+    font-family: "PP Neue Montreal Mono Medium";
+    font-size: var(--tamaño-12px);
+}
+
+.factura_info > :nth-child(2) {
+    font-family: "PP Gatwick Jumbo Semibold";
+    font-size: var(--tamaño-18px);
+}
+
+.factura_info > :nth-child(3) {
+    font-family: "Noto Sans JP";
+    font-size: var(--tamaño-14px);
+}
+
+.factura_info > :last-child {
+    display: flex;
+    justify-content: left;
+    align-items: baseline;
+    gap: 0.5vw;
+}
+
+.factura_info > :last-child > div {
+    margin: 1vh 0vw;
+    padding: 1vh 0.5vw;
+    font-family: "PP Neue Montreal Medium";
+    font-size: var(--tamaño-08px);
+    border: var(--color-blanco) solid 1px;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+.modal__reserva_A {
+    box-sizing: border-box;
+    margin: 0vh 31vw 10vh 31vw;
+    padding: 15vh 0vw 5vh 0vw;
+    background-color: #FFC20E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+}
+
+.modal__reserva_A > div {
+    background-color: #FFC20E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reserva_img {
+    width: 9vw;
+    height: auto;
+    padding: 0vh 0vw 5vh 0vw;
+}
+
+.reserva_texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reserva_numero {
+    display: flex;
+    justify-content: center;
+    gap: 0.5vw;
+}
+
+.reserva_seguir {
+    padding: 2vh 2vw 2vh 2vw;
+    border: var(--color-negro) solid 1px;
+    border-radius: 15px;
+    background-color: var(--color-blanco);
+}
+
+.reserva_volver {
+    border-bottom: var(--color-negro) solid 1.5px;
+}
+
+.condiciones > div {
+    padding: 1vh 0vw;
+}
+
+.condiciones > div > p {
+    color: var(--color-gris);
+}
+
+.confirmacion {
+    box-sizing: border-box;
+    margin: 3vh 0vw;
+    padding: 2vh 0vw 2vh 0vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    background-color: var(--color-amarillo);
+}
+
+.relleno {
+    font-family: "PP Neue Montreal Medium";
+    font-size: var(--tamaño-12px);
+}
+
+.japones {
+    font-family: "Noto Sans JP";
+    font-size: var(--tamaño-12px);
 }
