@@ -340,7 +340,7 @@ h2 {
 
 #inicio .title-hero {
     display: flex;
-    padding: 96px 0;
+    padding: 10vh 0;
     justify-content: space-between;
     align-items: center;
     width: 90%;
@@ -1640,7 +1640,7 @@ body.modal-abierto {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: var(--color-negro) solid 1px;
+    border: var(--color-amarillo) solid 1px;
     border-radius: 15px;
 }
 
@@ -1655,26 +1655,52 @@ body.modal-abierto {
 .reserva_img {
     width: 9vw;
     height: auto;
-    padding: 0vh 0vw 5vh 0vw;
+    margin: 2.5vh 0vw;
+    padding: 0vh 0vw 2vh 0vw;
 }
 
 .reserva_texto {
+    padding: 3vh 0vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.raya {
+    padding: 3vh 0vw;
+    border-bottom: var(--color-negro) solid 1px;
 }
 
 .reserva_numero {
     display: flex;
     justify-content: center;
     gap: 0.5vw;
+    font-family: "PP Neue Montreal Mono Medium";
+    font-size: var(--tamaño-14px);
+    padding: 3vh 0vw;
+}
+
+.reserva_numero_B {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5vw;
+    font-family: "PP Neue Montreal Mono Medium";
+    font-size: var(--tamaño-14px);
+    padding: 3vh 0vw;
 }
 
 .reserva_seguir {
+    margin: 5vh 0vw 3vh 0vw;
     padding: 2vh 2vw 2vh 2vw;
     border: var(--color-negro) solid 1px;
     border-radius: 15px;
-    background-color: var(--color-blanco);
+    background-color: var(--color-negro);
+}
+
+.reserva_seguir > a {
+    color: var(--color-blanco);
 }
 
 .reserva_volver {
@@ -1707,4 +1733,19 @@ body.modal-abierto {
 .japones {
     font-family: "Noto Sans JP";
     font-size: var(--tamaño-12px);
+}
+
+.factura_japones {
+    font-family: "Noto Sans JP";
+    font-size: var(--tamaño-18px);
+}
+
+.factura_español {
+    font-family: "PP Gatwick Jumbo Semibold";
+    font-size: var(--tamaño-24px);
+}
+
+.factura_bottom {
+    font-family: "PP Neue Montreal Medium";
+    font-size: var(--tamaño-18px);
 }
