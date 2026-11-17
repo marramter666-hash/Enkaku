@@ -226,7 +226,7 @@ function cardVinyl(v) {
                     condicion +
                 "</div>" +
                 '<div class="productos_opciones_texto_bottom">' +
-                    '<a href="../reservar/" class="btn-reservar">Reservar</a>' +
+                    '<a href="../formulario.html" class="btn-reservar">Reservar</a>' +
                 "</div>" +
             "</div>" +
         "</div>"
