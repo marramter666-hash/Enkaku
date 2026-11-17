@@ -474,3 +474,24 @@ h2 {
     padding: 2vh 0vw 2vh 0vw;
     font-size: var(--tamaño-12px);
 }
+
+
+
+
+
+
+
+
+
+.modal__reserva_A {
+    box-sizing: border-box;
+    margin: 0vh 0vw 4vh 0vw;
+    padding: 4vh 0vw 4vh 0vw;
+    background-color: #FFC20E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+}
