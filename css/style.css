@@ -500,14 +500,21 @@ h2 {
     border-radius: 15px;
 }
 
-.titulo_seccion {
+.seccion > :first-child {
     margin: 0vh 0vw 5vh 0vw;
     padding: 1vh 0vw 4vh 0vw;
+    gap: 0.5vw;
+    border-bottom: var(--color-negro) solid 1px;
+}
+
+.titulo_seccion {
+    margin: 0vh 0vw 2vh 0vw;
+    padding: 1vh 0vw 0vh 0vw;
     display: flex;
     justify-content: left;
     align-items: center;
     gap: 0.5vw;
-    border-bottom: var(--color-negro) solid 1px;
+    font-family: "PP Neue Montreal Mono Medium";
 }
 
 .info_seccion {
@@ -515,7 +522,7 @@ h2 {
     padding: 0vh 0vw 0vh 0vw;
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: baseline;
     gap: 0.5vw;
 }
 
@@ -524,16 +531,16 @@ h2 {
     padding: 0vh 0vw 0vh 0vw;
     display: flex;
     justify-content: left;
-    align-items: center;
+    align-items: baseline;
     gap: 2vw;
 }
 
 .bottom_seccion_medio {
-    margin: 5vh 0vw 0vh 0vw;
+    margin: 5vh 0vw 3vh 0vw;
     padding: 0vh 0vw 0vh 0vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     gap: 2vw;
 }
 
@@ -620,4 +627,14 @@ h2 {
 .reserva_volver {
     border-bottom: var(--color-negro) solid 1.5px;
 
+}
+
+.relleno {
+    font-family: "PP Neue Montreal Medium";
+    font-size: var(--tamaño-12px);
+}
+
+.japones {
+    font-family: "Noto Sans JP";
+    font-size: var(--tamaño-12px);
 }
