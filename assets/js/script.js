@@ -391,3 +391,227 @@ function actualizarRelojJapon() {
 
 actualizarRelojJapon();
 setInterval(actualizarRelojJapon, 1000);
+
+// SLIDER SHOW
+
+/* Slider con 1,5 slides visibles. Solo jQuery, sin librerías adicionales.
+   Funciona con tu HTML actual:
+   <div class="slideshow__pantalla"><div class="genero_disco slide"></div> ... </div> */
+
+var VISIBLES_ESCRITORIO = 2.2;   // cuántos slides se ven a la vez en escritorio
+var VISIBLES_MOVIL = 1;          // y en móvil: de uno en uno
+var PUNTO_MOVIL = 768;           // px: a este ancho o menos se considera móvil
+var VISIBLES = VISIBLES_ESCRITORIO;   // valor activo (lo actualiza ajustarSlides)
+var consulta = window.matchMedia("(max-width: " + PUNTO_MOVIL + "px)");
+var INTERVALO = 3000;    // ms entre cambios automáticos
+var REINICIO = 5000;     // ms de espera tras interactuar, antes de reanudar el automático
+var VELOCIDAD = 600;     // ms que dura el desplazamiento
+var UMBRAL_CLIC = 5;     // px que hay que mover el ratón para que cuente como arrastre (por debajo es un clic normal)
+var UMBRAL_CAMBIO = 0.15; // fracción de slide que hay que arrastrar para pasar al siguiente / anterior
+
+var pista, slides, total;
+var actual = 0;
+var automatico = null, espera;
+var enHover = false;     // true mientras el ratón está sobre un slide
+var pulsado = false;     // botón del ratón / dedo apoyado
+var arrastrando = false; // ya se ha superado UMBRAL_CLIC
+var huboArrastre = false;
+var inicioX = 0, inicioT = 0, punteroId = 0;
+
+$(function () {
+    var pantalla = $(".slideshow__pantalla");
+    slides = pantalla.find(".slide");
+    total = slides.length;
+    if (total < 2) return;
+
+    VISIBLES = calcularVisibles();
+
+    // 1. Los slides se meten en una "pista" y se colocan en fila
+    slides.wrapAll('<div class="slideshow__pista"></div>');
+    pista = pantalla.find(".slideshow__pista");
+
+    // 2. Layout con estilos en línea: así anula el position:absolute / display:none del CSS antiguo
+    pantalla.css({ position: "relative", overflow: "hidden" });
+
+    pista.css({
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        display: "flex",
+        transition: "transform " + VELOCIDAD + "ms ease"
+    });
+
+    slides.css({
+        position: "relative",
+        top: "auto",
+        left: "auto",
+        right: "auto",
+        bottom: "auto",
+        display: "block",
+        flex: "0 0 " + (100 / VISIBLES) + "%",     // cada slide mide 100 / VISIBLES %
+        width: (100 / VISIBLES) + "%",
+        height: "100%",
+        boxSizing: "border-box"
+    });
+
+    mostrar(0);
+    arrancar();
+
+    // Pausa mientras el ratón está sobre un slide; al salir, se reanuda
+    pantalla
+        .on("mouseenter", ".slide", function () {
+            enHover = true;
+            clearTimeout(espera);
+            detener();
+        })
+        .on("mouseleave", ".slide", function () {
+            if (arrastrando) return;
+            enHover = false;
+            arrancar();
+        });
+
+    activarArrastre(pantalla);
+
+    // Al cruzar el punto de corte (girar el móvil, redimensionar la ventana...) se recalcula
+    if (consulta.addEventListener) consulta.addEventListener("change", ajustarSlides);
+    else consulta.addListener(ajustarSlides);          // Safari antiguo
+});
+
+function calcularVisibles() {
+    return consulta.matches ? VISIBLES_MOVIL : VISIBLES_ESCRITORIO;
+}
+
+// Recoloca los slides con el nuevo número de visibles, sin animación para que no "salte"
+function ajustarSlides() {
+    VISIBLES = calcularVisibles();
+    var ancho = (100 / VISIBLES) + "%";
+    slides.css({ flex: "0 0 " + ancho, width: ancho });
+
+    pista.css("transition", "none");
+    mostrar(actual);
+    pista[0].offsetWidth;                               // fuerza el reflow antes de reactivar la transición
+    pista.css("transition", "transform " + VELOCIDAD + "ms ease");
+}
+
+function mostrar(indice) {
+    actual = indice;
+
+    // El slide actual siempre queda completo y pegado al borde izquierdo.
+    // translateX en % es relativo al ancho de la pista: 100 / VISIBLES % = avanzar exactamente un slide
+    pista.css("transform", "translateX(" + (-actual * 100 / VISIBLES) + "%)");
+}
+
+function siguiente() {
+    var n = actual + 1;
+    if (n === total) {
+        n = 0;
+    }
+    mostrar(n);
+}
+
+function anterior() {
+    var n = actual - 1;
+    if (n < 0) {
+        n = total - 1;
+    }
+    mostrar(n);
+}
+
+/* Control con el ratón (o el dedo): arrastrar para mover; al soltar, el slider se ajusta al slide más cercano */
+function activarArrastre(pantalla) {
+    pista.css({ cursor: "grab", touchAction: "pan-y", userSelect: "none", WebkitUserSelect: "none" });
+
+    // Evita el "fantasma" que el navegador crea al arrastrar imágenes
+    pantalla.on("dragstart", function (e) { e.preventDefault(); });
+
+    pista.on("pointerdown", function (e) {
+        var ev = e.originalEvent;
+        if (ev.pointerType === "mouse" && ev.button !== 0) return;    // solo botón izquierdo
+        pulsado = true;
+        arrastrando = false;
+        huboArrastre = false;
+        inicioX = ev.clientX;
+        inicioT = Date.now();
+        punteroId = ev.pointerId;
+    });
+
+    pista.on("pointermove", function (e) {
+        if (!pulsado) return;
+        var dx = e.originalEvent.clientX - inicioX;
+
+        if (!arrastrando) {
+            if (Math.abs(dx) < UMBRAL_CLIC) return;       // todavía puede ser un clic
+            arrastrando = true;
+            huboArrastre = true;
+            clearTimeout(espera);
+            detener();
+            pista.css({ transition: "none", cursor: "grabbing" });
+            try { pista[0].setPointerCapture(punteroId); } catch (err) { /* sin soporte */ }
+        }
+
+        // Posición en % del ancho de la pista (mismas unidades que mostrar())
+        var base = -actual * 100 / VISIBLES;
+        var ultimo = -(total - 1) * 100 / VISIBLES;
+        var pos = base + dx / pista.width() * 100;
+
+        // Resistencia en los extremos: se estira, pero menos
+        if (pos > 0) pos = pos * 0.35;
+        else if (pos < ultimo) pos = ultimo + (pos - ultimo) * 0.35;
+
+        pista.css("transform", "translateX(" + pos + "%)");
+    });
+
+    function terminar(e) {
+        if (!pulsado) return;
+        pulsado = false;
+        if (!arrastrando) return;
+        arrastrando = false;
+
+        var dx = e.type === "pointercancel" ? 0 : e.originalEvent.clientX - inicioX;
+        try { pista[0].releasePointerCapture(punteroId); } catch (err) { /* sin soporte */ }
+        pista.css({ transition: "transform " + VELOCIDAD + "ms ease", cursor: "grab" });
+
+        // Cambia de slide si se arrastró lo suficiente o fue un gesto rápido (flick)
+        var ancho = slides.eq(0).outerWidth();
+        var rapido = (Date.now() - inicioT) < 250 && Math.abs(dx) > 30;
+        var destino = actual;
+        if (dx < 0 && (-dx > ancho * UMBRAL_CAMBIO || rapido)) destino = Math.min(total - 1, actual + 1);
+        if (dx > 0 && (dx > ancho * UMBRAL_CAMBIO || rapido)) destino = Math.max(0, actual - 1);
+        mostrar(destino);
+
+        // Durante el arrastre se ignoró mouseleave: se recalcula si el ratón sigue encima
+        enHover = pantalla.find(".slide:hover").length > 0;
+        pausar();
+    }
+    pista.on("pointerup pointercancel", terminar);
+
+    // Si hubo arrastre, el clic que sigue al soltar no debe activar enlaces ni botones dentro del slide
+    pantalla[0].addEventListener("click", function (e) {
+        if (huboArrastre) {
+            e.preventDefault();
+            e.stopPropagation();
+            huboArrastre = false;
+        }
+    }, true);
+}
+
+// Arranca el automático (si ya está en marcha o el ratón está encima, no hace nada)
+function arrancar() {
+    if (!automatico && !enHover) {
+        automatico = setInterval(siguiente, INTERVALO);
+    }
+}
+
+function detener() {
+    clearInterval(automatico);
+    automatico = null;
+}
+
+// Si el usuario interactúa con los botones, se para el automático y se reanuda a los 5 segundos
+function pausar() {
+    detener();
+    clearTimeout(espera);
+    espera = setTimeout(arrancar, REINICIO);
+}
