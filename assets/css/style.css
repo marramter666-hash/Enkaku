@@ -114,36 +114,108 @@ h2 {
     justify-content: left;
 }
 
-.header > nav > :first-child > div {
-    box-sizing: border-box;
-    margin: 0vh 0vw;
-    padding: 1vh 0.5vw;
-    border-radius: 10px;
+.header > nav > :last-child {
     display: flex;
-    justify-content: left;
     align-items: center;
+    gap: 1rem;
 }
 
 .header > nav > :last-child > img {
-    box-sizing: border-box;
-    margin: 0vh 0vw;
-    padding: 0vh 1vw;
-    display: flex;
-    justify-content: left;
-    align-items: center;
+    height: 30px;
+    width: auto;
 }
 
 .header > nav > div > div > a {
     box-sizing: border-box;
-    margin: 0vh 0vw;
     padding: 1vh 2vw;
     border-radius: 10px;
     display: flex;
-    justify-content: right;
+    align-items: center;
     background-color: var(--color-blanco);
     transition: all .3s ease-in-out;
-
 }
+
+.header > nav > div > a {
+    box-sizing: border-box;
+    padding: 1vh 2vw;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-blanco);
+    transition: all .3s ease-in-out;
+}
+
+/* ---------- Cabecera y menú (móvil) ---------- */
+/* Botón hamburguesa oculto en escritorio */
+.menu-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-btn span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--color-blanco);
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Animación de la X al abrir */
+.menu-btn.abierto span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-btn.abierto span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn.abierto span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Menú en escritorio: visible en fila y SIN !important */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a {
+    box-sizing: border-box;
+    padding: 1vh 0.5vw;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.menu a:hover {
+    color: var(--color-blanco);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bottom_tienda:hover {
     background-color: var(--color-azul);
@@ -163,6 +235,10 @@ h2 {
 .bottom_inicio:hover {
     background-color: var(--color-rosa);
     color: var(--color-negro);
+}
+
+.bottom_menu {
+    background-color: var(--color-blanco);
 }
 
 
@@ -1822,4 +1898,83 @@ body.modal-abierto {
     .genero_disco .genero_disco_texto {
       padding: 24px;
   }
+
+
+
+
+
+  /* HEADER */
+    .header > nav {
+        padding: 2vh 3vw 2vh 3vw;
+        display: flex;
+        justify-content: space-between;
+        top: 0vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 100%;
+        z-index: 1000;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .header > nav {
+        padding: 2vh 3vw;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    /* Oculto por defecto, jQuery lo despliega al hacer clic */
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-negro);
+        padding: 1rem 5vw;
+        box-sizing: border-box;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+    }
+
+    .menu a {
+        display: block;
+        padding: 0.8rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .header > nav > div > div > a {
+        box-sizing: border-box;
+        margin: 0vh 0vw;
+        padding: 1vh 5vw;
+        border-radius: 10px;
+        display: flex;
+        justify-content: right;
+        background-color: var(--color-blanco);
+        transition: all .3s ease-in-out;
+    }
+
+    .bottom_menu {
+        background-color: var(--color-blanco);
+    }
+
+    .header > nav > div > a {
+        box-sizing: border-box;
+        padding: 1vh 30vw;
+        border-radius: 10px;
+    }
+
+    .header > nav > .menu {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
 }
